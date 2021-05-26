@@ -2750,8 +2750,17 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 30 "Proyecto02.c" 2
-# 39 "Proyecto02.c"
+# 42 "Proyecto02.c"
+volatile uint8_t var;
+volatile char angle[] = { 64, 64, 64 };
+char DutyCycle(char carga);
+
+
+
+
 void setup(void);
+void pwm(void);
+void chanel(void);
 
 
 
@@ -2759,17 +2768,43 @@ void setup(void);
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 
-       if(PIR1bits.ADIF == 1)
-       {if(ADCON0bits.CHS == 0)
-             CCPR2L = (ADRESH>>1)+124;
+       if(PIR1bits.ADIF == 1){
+       if(ADCON0bits.CHS == 0) {
+             CCPR2L = (ADRESH>>1)+124;}
 
 
-           else
-           CCPR1L = (ADRESH>>1)+124;
-
-
+        else{
+            CCPR1L = (ADRESH>>1)+124;
+           }
 
            PIR1bits.ADIF = 0;
+       }
+
+       if(INTCONbits.T0IF){
+
+           switch(var){
+               case 0:
+                   PORTDbits.RD0 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 1:
+                   PORTDbits.RD0 = 0;
+                   PORTDbits.RD1 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 2:
+                   PORTDbits.RD1 = 0;
+                   PORTDbits.RD2 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 3:
+                   PORTDbits.RD2 = 0;
+                   TMR0 = 0;
+                   break;
+           }
+           var++;
+           T0IF = 0;
+
        }
     }
 
@@ -2780,18 +2815,13 @@ void main(void) {
 
     setup();
 
-
     while(1)
     {
-        if(ADCON0bits.GO == 0){
-            if(ADCON0bits.CHS == 1)
-                ADCON0bits.CHS = 0;
-            else
-                ADCON0bits.CHS = 1;
+      chanel();
+      RD0 = 1;
+      _delay((unsigned long)((50)*(4000000/4000000.0)));
+      RD0 = 0;
 
-            _delay((unsigned long)((100)*(8000000/4000000.0)));
-            ADCON0bits.GO = 1;
-        }
 
     }
 }
@@ -2834,12 +2864,9 @@ void setup(void){
     WPUBbits.WPUB = 0b00000011;
 
 
-
-
-
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.IRCF0 = 1;
     OSCCONbits.SCS = 1;
 
 
@@ -2853,7 +2880,7 @@ void setup(void){
     ADCON0bits.ADCS1 = 1;
     ADCON0bits.ADON = 1;
     ADCON0bits.CHS = 0;
-    _delay((unsigned long)((50)*(8000000/4000000.0)));
+    _delay((unsigned long)((50)*(4000000/4000000.0)));
 
     ADCON1bits.ADFM = 0;
     ADCON1bits.VCFG0 = 0;
@@ -2882,4 +2909,23 @@ void setup(void){
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
 
+}
+
+
+void chanel(void){
+
+    if(ADCON0bits.GO == 0){
+            if(ADCON0bits.CHS == 1)
+                ADCON0bits.CHS = 0;
+            else
+                ADCON0bits.CHS = 1;
+
+            _delay((unsigned long)((100)*(4000000/4000000.0)));
+            ADCON0bits.GO = 1;
+        }
+
+}
+
+char DutyCycle(char carga){
+    return carga+31;
 }

@@ -24,19 +24,31 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-#define _XTAL_FREQ 8000000
+
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>  // Para usar printf
 
+// Defino los bits en palabras claves
+#define _XTAL_FREQ 4000000
+#define Motor01 PORTDbits.RD0 // RD0
+#define Motor02 PORTDbits.RD1 // RD1
+#define Motor03 PORTDbits.RD2 // RD2
+
+
 //-----------------------------------------------------------------------------
 //                            Variables 
 //-----------------------------------------------------------------------------
+volatile uint8_t var;
+volatile char angle[] = { 64, 64, 64 };
+char DutyCycle(char carga);
 
 //-----------------------------------------------------------------------------
 //                            Prototipos 
 //-----------------------------------------------------------------------------
 void setup(void);   // Defino las funciones antes de crearlas
+void pwm(void);
+void chanel(void);
 
 //-----------------------------------------------------------------------------
 //                            Interrupciones
@@ -44,17 +56,43 @@ void setup(void);   // Defino las funciones antes de crearlas
 void __interrupt() isr(void)
 {
         // Interrupcion del ADC
-       if(PIR1bits.ADIF == 1)       // Reviso la bandera del ADC
-       {if(ADCON0bits.CHS == 0)  // Si estoy en el canal 0 desplegar al portc
-             CCPR2L = (ADRESH>>1)+124;
+       if(PIR1bits.ADIF == 1){       // Reviso la bandera del ADC
+       if(ADCON0bits.CHS == 0) { // Si estoy en el canal 0 
+             CCPR2L = (ADRESH>>1)+124;}
            
        
-           else             // Sino mover adresh a la division
-           CCPR1L = (ADRESH>>1)+124;
-//           CCP1CONbits.DC1B1 = ADRESH & 0b01;
-//           CCP1CONbits.DC1B0 = (ADRESH>>7);
-           
+        else{         
+            CCPR1L = (ADRESH>>1)+124;
+           }
+       
            PIR1bits.ADIF = 0;        // Bajo la bandera del ADC
+       }
+       
+       if(INTCONbits.T0IF){
+//           
+           switch(var){
+               case 0: 
+                   Motor01 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 1: 
+                   Motor01 = 0;
+                   Motor02 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 2: 
+                   Motor02 = 0;
+                   Motor03 = 1;
+                   TMR0 = 0-DutyCycle(angle[var]);
+                   break;
+               case 3: 
+                   Motor03 = 0;
+                   TMR0 = 0;
+                   break;                   
+           }
+           var++;
+           T0IF = 0;
+                   
        }
     }
 
@@ -64,19 +102,14 @@ void __interrupt() isr(void)
 void main(void) {
     
     setup();    // Llamo a mi configuracion
-//    ADCON0bits.GO = 1;     // Bita para que comience la conversion
     
     while(1)    // Equivale al loop
     {
-        if(ADCON0bits.GO == 0){     // Se crea un cambio de canal
-            if(ADCON0bits.CHS == 1) // si es 1 que se vuelva 0
-                ADCON0bits.CHS = 0;
-            else                // si no es 1, que se vuelva 1
-                ADCON0bits.CHS = 1;
-            
-            __delay_us(100);        // Se espera un tiempo para hacer el cambio
-            ADCON0bits.GO = 1;  // Activo las conversiones
-        }
+      chanel();  
+      RD0 = 1;
+      __delay_us(50);
+      RD0 = 0;
+      
        
     }
 }
@@ -116,15 +149,12 @@ void setup(void){
     
     // Configuracion de Pull Up puerto B
     OPTION_REGbits.nRBPU = 0;       // Habilitar pullup interno
-    WPUBbits.WPUB = 0b00000011;
-//    WPUBbits.WPUB0 = 1;     // boton 1
-//    WPUBbits.WPUB1 = 1;     // boton 2
-    
+    WPUBbits.WPUB = 0b00000011;    
     
     // Se configura el oscilador
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 0;   // Se configura a 4MHz
+    OSCCONbits.IRCF0 = 1;   // Se configura a 8MHz
     OSCCONbits.SCS = 1;
     
     // Configuacion de las interrupciones
@@ -168,3 +198,23 @@ void setup(void){
     TRISCbits.TRISC2 = 0;
   
 }
+
+
+void chanel(void){
+ 
+    if(ADCON0bits.GO == 0){     // Se crea un cambio de canal
+            if(ADCON0bits.CHS == 1) // si es 1 que se vuelva 0
+                ADCON0bits.CHS = 0;
+            else                // si no es 1, que se vuelva 1
+                ADCON0bits.CHS = 1;
+            
+            __delay_us(100);        // Se espera un tiempo para hacer el cambio
+            ADCON0bits.GO = 1;  // Activo las conversiones
+        }
+    
+}
+
+char DutyCycle(char carga){
+    return  carga+31;
+}
+
