@@ -2750,17 +2750,23 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 30 "Proyecto02.c" 2
-# 42 "Proyecto02.c"
-volatile uint8_t var;
-volatile char angle[] = { 64, 64, 64 };
-char DutyCycle(char carga);
+# 39 "Proyecto02.c"
+int var;
 
 
 
 
 void setup(void);
-void pwm(void);
 void chanel(void);
+void dedo1_1(void);
+void dedo1_2(void);
+void dedo1_3(void);
+void dedo2_1(void);
+void dedo2_2(void);
+void dedo2_3(void);
+void dedo3_1(void);
+void dedo3_2(void);
+void dedo3_3(void);
 
 
 
@@ -2770,42 +2776,80 @@ void __attribute__((picinterrupt(("")))) isr(void)
 
        if(PIR1bits.ADIF == 1){
        if(ADCON0bits.CHS == 0) {
-             CCPR2L = (ADRESH>>1)+124;}
+             CCPR2L = (ADRESH>>1)+124;
 
 
-        else{
-            CCPR1L = (ADRESH>>1)+124;
            }
 
+        else if(ADCON0bits.CHS == 1){
+            CCPR1L = (ADRESH>>1)+124;
+
+           }
+
+        else if(ADCON0bits.CHS == 2){
+            var = ADRESH;
+
+           if (var <= 85){
+              dedo1_3();
+
+                 }
+           if ((var <= 170)&&(var >= 86)){
+               dedo1_2();
+                 }
+            if (var >= 171){
+               dedo1_1();
+                 }
+             }
+       else if(ADCON0bits.CHS == 3){
+            var = ADRESH;
+
+           if (var <= 85){
+              dedo2_3();
+
+                 }
+           if ((var <= 170)&&(var >= 86)){
+               dedo2_2();
+                 }
+            if (var >= 171){
+               dedo2_1();
+                 }
+             }
+       else if(ADCON0bits.CHS == 4){
+            var = ADRESH;
+
+           if (var <= 85){
+              dedo3_3();
+
+                 }
+           if ((var <= 170)&&(var >= 86)){
+               dedo3_2();
+                 }
+            if (var >= 171){
+               dedo3_1();
+                 }
+             }
+
+           _delay((unsigned long)((50)*(8000000/4000000.0)));
            PIR1bits.ADIF = 0;
        }
 
-       if(INTCONbits.T0IF){
 
-           switch(var){
-               case 0:
-                   PORTDbits.RD0 = 1;
-                   TMR0 = 0-DutyCycle(angle[var]);
-                   break;
-               case 1:
-                   PORTDbits.RD0 = 0;
-                   PORTDbits.RD1 = 1;
-                   TMR0 = 0-DutyCycle(angle[var]);
-                   break;
-               case 2:
-                   PORTDbits.RD1 = 0;
-                   PORTDbits.RD2 = 1;
-                   TMR0 = 0-DutyCycle(angle[var]);
-                   break;
-               case 3:
-                   PORTDbits.RD2 = 0;
-                   TMR0 = 0;
-                   break;
-           }
-           var++;
-           T0IF = 0;
-
-       }
+       if (RBIF == 1)
+    {
+        if (PORTBbits.RB1 == 0)
+        {
+            PORTBbits.RB7 = 1;
+        }
+        else if (PORTBbits.RB0 == 0)
+        {
+            PORTBbits.RB6 = 1;
+        }
+        else {
+            PORTBbits.RB6 = 0;
+            PORTBbits.RB7 = 0;
+        }
+        INTCONbits.RBIF = 0;
+        }
     }
 
 
@@ -2818,10 +2862,6 @@ void main(void) {
     while(1)
     {
       chanel();
-      RD0 = 1;
-      _delay((unsigned long)((50)*(4000000/4000000.0)));
-      RD0 = 0;
-
 
     }
 }
@@ -2864,6 +2904,9 @@ void setup(void){
     WPUBbits.WPUB = 0b00000011;
 
 
+    IOCBbits.IOCB = 0b00000011;
+
+
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
@@ -2871,6 +2914,8 @@ void setup(void){
 
 
     INTCONbits.GIE = 1;
+    INTCONbits.RBIF = 1;
+    INTCONbits.RBIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.ADIE = 1;
     PIR1bits.ADIF = 0;
@@ -2880,7 +2925,7 @@ void setup(void){
     ADCON0bits.ADCS1 = 1;
     ADCON0bits.ADON = 1;
     ADCON0bits.CHS = 0;
-    _delay((unsigned long)((50)*(4000000/4000000.0)));
+    _delay((unsigned long)((50)*(8000000/4000000.0)));
 
     ADCON1bits.ADFM = 0;
     ADCON1bits.VCFG0 = 0;
@@ -2915,17 +2960,86 @@ void setup(void){
 void chanel(void){
 
     if(ADCON0bits.GO == 0){
-            if(ADCON0bits.CHS == 1)
-                ADCON0bits.CHS = 0;
-            else
+            if(ADCON0bits.CHS == 0){
                 ADCON0bits.CHS = 1;
+            }
+            else if (ADCON0bits.CHS == 1){
+                ADCON0bits.CHS = 2;
+            }
+            else if (ADCON0bits.CHS == 2){
+                ADCON0bits.CHS = 3;
+            }
+            else if (ADCON0bits.CHS == 3){
+                ADCON0bits.CHS = 4;
+            }
+            else if (ADCON0bits.CHS == 4){
+                ADCON0bits.CHS = 0;
+            }
 
-            _delay((unsigned long)((100)*(4000000/4000000.0)));
+            _delay((unsigned long)((50)*(8000000/4000000.0)));
             ADCON0bits.GO = 1;
         }
-
 }
 
-char DutyCycle(char carga){
-    return carga+31;
-}
+void dedo1_1(void){
+    PORTDbits.RD0 = 1;
+    _delay((unsigned long)((0.7)*(8000000/4000.0)));
+    PORTDbits.RD0 = 0;
+    _delay((unsigned long)((19.3)*(8000000/4000.0)));
+    }
+
+void dedo1_2(void){
+    PORTDbits.RD0 = 1;
+    _delay((unsigned long)((1.5)*(8000000/4000.0)));
+    PORTDbits.RD0 = 0;
+    _delay((unsigned long)((18.5)*(8000000/4000.0)));
+    }
+
+void dedo1_3(void){
+    PORTDbits.RD0 = 1;
+    _delay((unsigned long)((2)*(8000000/4000.0)));
+    PORTDbits.RD0 = 0;
+    _delay((unsigned long)((18)*(8000000/4000.0)));
+    }
+
+void dedo2_1(void){
+    PORTDbits.RD1 = 1;
+    _delay((unsigned long)((0.7)*(8000000/4000.0)));
+    PORTDbits.RD1 = 0;
+    _delay((unsigned long)((19.3)*(8000000/4000.0)));
+    }
+
+void dedo2_2(void){
+    PORTDbits.RD1 = 1;
+    _delay((unsigned long)((1.5)*(8000000/4000.0)));
+    PORTDbits.RD1 = 0;
+    _delay((unsigned long)((18.5)*(8000000/4000.0)));
+    }
+
+void dedo2_3(void){
+    PORTDbits.RD1 = 1;
+    _delay((unsigned long)((2)*(8000000/4000.0)));
+    PORTDbits.RD1 = 0;
+    _delay((unsigned long)((17)*(8000000/4000.0)));
+    }
+
+void dedo3_1(void){
+    PORTDbits.RD2 = 1;
+    _delay((unsigned long)((0.7)*(8000000/4000.0)));
+    PORTDbits.RD2 = 0;
+    _delay((unsigned long)((19.3)*(8000000/4000.0)));
+    }
+
+void dedo3_2(void){
+    PORTDbits.RD2 = 1;
+    _delay((unsigned long)((1.5)*(8000000/4000.0)));
+    PORTDbits.RD2 = 0;
+    _delay((unsigned long)((18.5)*(8000000/4000.0)));
+    }
+
+void dedo3_3(void){
+    PORTDbits.RD2 = 1;
+    _delay((unsigned long)((2)*(8000000/4000.0)));
+    PORTDbits.RD2 = 0;
+    _delay((unsigned long)((17)*(8000000/4000.0)));
+    }
