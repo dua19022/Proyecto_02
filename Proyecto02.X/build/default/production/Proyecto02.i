@@ -2752,6 +2752,13 @@ extern int printf(const char *, ...);
 # 30 "Proyecto02.c" 2
 # 39 "Proyecto02.c"
 int var;
+int var1;
+int var2;
+char dato;
+char direccion;
+int lectura_01;
+int lectura_02;
+int lectura_03;
 
 
 
@@ -2767,6 +2774,8 @@ void dedo2_3(void);
 void dedo3_1(void);
 void dedo3_2(void);
 void dedo3_3(void);
+void write_eeprom (char dato, char direccion);
+char read_eeprom (char direccion);
 
 
 
@@ -2801,30 +2810,29 @@ void __attribute__((picinterrupt(("")))) isr(void)
                  }
              }
        else if(ADCON0bits.CHS == 3){
-            var = ADRESH;
+            var1 = ADRESH;
 
-           if (var <= 85){
+           if (var1 <= 85){
               dedo2_3();
 
                  }
-           if ((var <= 170)&&(var >= 86)){
+           if ((var1 <= 170)&&(var1 >= 86)){
                dedo2_2();
                  }
-            if (var >= 171){
+            if (var1 >= 171){
                dedo2_1();
                  }
              }
        else if(ADCON0bits.CHS == 4){
-            var = ADRESH;
+            var2 = ADRESH;
 
-           if (var <= 85){
+           if (var2 <= 85){
               dedo3_3();
-
                  }
-           if ((var <= 170)&&(var >= 86)){
+           if ((var2 <= 170)&&(var2 >= 86)){
                dedo3_2();
                  }
-            if (var >= 171){
+            if (var2 >= 171){
                dedo3_1();
                  }
              }
@@ -2838,11 +2846,50 @@ void __attribute__((picinterrupt(("")))) isr(void)
     {
         if (PORTBbits.RB1 == 0)
         {
+            ADCON0bits.ADON = 0;
             PORTBbits.RB7 = 1;
+            lectura_01 = read_eeprom (0x17);
+            lectura_02 = read_eeprom (0x18);
+            lectura_03 = read_eeprom (0x19);
+            if (lectura_01 <= 85){
+              dedo1_3();
+
+                 }
+           if ((lectura_01 <= 170)&&(lectura_01 >= 86)){
+               dedo1_2();
+                 }
+            if (lectura_01 >= 171){
+               dedo1_1();
+                 }
+            if (lectura_02 <= 85){
+              dedo2_3();
+
+                 }
+           if ((lectura_02 <= 170)&&(lectura_02 >= 86)){
+               dedo2_2();
+                 }
+            if (lectura_02 >= 171){
+               dedo2_1();
+                 }
+            if (lectura_03 <= 85){
+              dedo3_3();
+                 }
+           if ((lectura_03 <= 170)&&(lectura_03 >= 86)){
+               dedo3_2();
+                 }
+            if (lectura_03 >= 171){
+               dedo3_1();
+                 }
+            _delay((unsigned long)((2000)*(8000000/4000.0)));
+            ADCON0bits.ADON = 1;
         }
         else if (PORTBbits.RB0 == 0)
         {
             PORTBbits.RB6 = 1;
+            write_eeprom (var, 0x17);
+            write_eeprom (var1, 0x18);
+            write_eeprom (var2, 0x19);
+            _delay((unsigned long)((500)*(8000000/4000.0)));
         }
         else {
             PORTBbits.RB6 = 0;
@@ -3043,3 +3090,33 @@ void dedo3_3(void){
     PORTDbits.RD2 = 0;
     _delay((unsigned long)((17)*(8000000/4000.0)));
     }
+
+void write_eeprom (char dato, char direccion){
+    EEADR = direccion;
+    EEDAT = dato;
+
+
+    INTCONbits.GIE = 0;
+
+    EECON1bits.EEPGD = 0;
+    EECON1bits.WREN = 1;
+
+
+    EECON2 = 0x55;
+    EECON2 = 0xAA;
+
+    EECON1bits.WR = 1;
+
+    while(PIR2bits.EEIF == 0);
+    PIR2bits.EEIF = 0;
+
+    EECON1bits.WREN = 0;
+}
+
+char read_eeprom (char direccion){
+    EEADR = direccion;
+    EECON1bits.EEPGD = 0;
+    EECON1bits.RD = 1;
+    char dato = EEDATA;
+    return dato;
+}

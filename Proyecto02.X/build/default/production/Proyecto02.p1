@@ -44,32 +44,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "927
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 927: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
 [v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
-"48 Proyecto02.c
-[; ;Proyecto02.c: 48: void dedo1_3(void);
+"55 Proyecto02.c
+[; ;Proyecto02.c: 55: void dedo1_3(void);
 [v _dedo1_3 `(v ~T0 @X0 0 ef ]
-"47
-[; ;Proyecto02.c: 47: void dedo1_2(void);
-[v _dedo1_2 `(v ~T0 @X0 0 ef ]
-"46
-[; ;Proyecto02.c: 46: void dedo1_1(void);
-[v _dedo1_1 `(v ~T0 @X0 0 ef ]
-"51
-[; ;Proyecto02.c: 51: void dedo2_3(void);
-[v _dedo2_3 `(v ~T0 @X0 0 ef ]
-"50
-[; ;Proyecto02.c: 50: void dedo2_2(void);
-[v _dedo2_2 `(v ~T0 @X0 0 ef ]
-"49
-[; ;Proyecto02.c: 49: void dedo2_1(void);
-[v _dedo2_1 `(v ~T0 @X0 0 ef ]
 "54
-[; ;Proyecto02.c: 54: void dedo3_3(void);
-[v _dedo3_3 `(v ~T0 @X0 0 ef ]
+[; ;Proyecto02.c: 54: void dedo1_2(void);
+[v _dedo1_2 `(v ~T0 @X0 0 ef ]
 "53
-[; ;Proyecto02.c: 53: void dedo3_2(void);
+[; ;Proyecto02.c: 53: void dedo1_1(void);
+[v _dedo1_1 `(v ~T0 @X0 0 ef ]
+"58
+[; ;Proyecto02.c: 58: void dedo2_3(void);
+[v _dedo2_3 `(v ~T0 @X0 0 ef ]
+"57
+[; ;Proyecto02.c: 57: void dedo2_2(void);
+[v _dedo2_2 `(v ~T0 @X0 0 ef ]
+"56
+[; ;Proyecto02.c: 56: void dedo2_1(void);
+[v _dedo2_1 `(v ~T0 @X0 0 ef ]
+"61
+[; ;Proyecto02.c: 61: void dedo3_3(void);
+[v _dedo3_3 `(v ~T0 @X0 0 ef ]
+"60
+[; ;Proyecto02.c: 60: void dedo3_2(void);
 [v _dedo3_2 `(v ~T0 @X0 0 ef ]
-"52
-[; ;Proyecto02.c: 52: void dedo3_1(void);
+"59
+[; ;Proyecto02.c: 59: void dedo3_1(void);
 [v _dedo3_1 `(v ~T0 @X0 0 ef ]
 [v F1256 `(v ~T0 @X0 1 tf1`ul ]
 "92 D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
@@ -89,7 +89,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "245
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"465
+"63 Proyecto02.c
+[; ;Proyecto02.c: 63: char read_eeprom (char direccion);
+[v _read_eeprom `(uc ~T0 @X0 0 ef1`uc ]
+"62
+[; ;Proyecto02.c: 62: void write_eeprom (char dato, char direccion);
+[v _write_eeprom `(v ~T0 @X0 0 ef2`uc`uc ]
+"465 D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 465:     struct {
 [s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
@@ -105,11 +111,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 [p mainexit ]
-"44 Proyecto02.c
-[; ;Proyecto02.c: 44: void setup(void);
+"51 Proyecto02.c
+[; ;Proyecto02.c: 51: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
-"45
-[; ;Proyecto02.c: 45: void chanel(void);
+"52
+[; ;Proyecto02.c: 52: void chanel(void);
 [v _chanel `(v ~T0 @X0 0 ef ]
 "3387 D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
@@ -318,6 +324,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "369
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 369: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
 [v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+"3257
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3257: extern volatile unsigned char EEADR __attribute__((address(0x10D)));
+[v _EEADR `Vuc ~T0 @X0 0 e@269 ]
+"3250
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3250: extern volatile unsigned char EEDAT __attribute__((address(0x10C)));
+[v _EEDAT `Vuc ~T0 @X0 0 e@268 ]
+"3505
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3505:     struct {
+[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S137 . RD WR WREN WRERR . EEPGD ]
+"3504
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3504: typedef union {
+[u S136 `S137 1 ]
+[n S136 . . ]
+"3514
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3514: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x18C)));
+[v _EECON1bits `VS136 ~T0 @X0 0 e@396 ]
+"3544
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3544: extern volatile unsigned char EECON2 __attribute__((address(0x18D)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@397 ]
+"599
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 599:     struct {
+[s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S21 . CCP2IF . ULPWUIF BCLIF EEIF C1IF C2IF OSFIF ]
+"598
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 598: typedef union {
+[u S20 `S21 1 ]
+[n S20 . . ]
+"610
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 610: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x00D)));
+[v _PIR2bits `VS20 ~T0 @X0 0 e@13 ]
+"3245
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3245: extern volatile unsigned char EEDATA __attribute__((address(0x10C)));
+[v _EEDATA `Vuc ~T0 @X0 0 e@268 ]
 "9 Proyecto02.c
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "10
@@ -579,737 +619,964 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39 Proyecto02.c
 [; ;Proyecto02.c: 39: int var;
 [v _var `i ~T0 @X0 1 e ]
+"40
+[; ;Proyecto02.c: 40: int var1;
+[v _var1 `i ~T0 @X0 1 e ]
+"41
+[; ;Proyecto02.c: 41: int var2;
+[v _var2 `i ~T0 @X0 1 e ]
+"42
+[; ;Proyecto02.c: 42: char dato;
+[v _dato `uc ~T0 @X0 1 e ]
+"43
+[; ;Proyecto02.c: 43: char direccion;
+[v _direccion `uc ~T0 @X0 1 e ]
+"44
+[; ;Proyecto02.c: 44: int lectura_01;
+[v _lectura_01 `i ~T0 @X0 1 e ]
+"45
+[; ;Proyecto02.c: 45: int lectura_02;
+[v _lectura_02 `i ~T0 @X0 1 e ]
+"46
+[; ;Proyecto02.c: 46: int lectura_03;
+[v _lectura_03 `i ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"59
-[; ;Proyecto02.c: 59: void __attribute__((picinterrupt(("")))) isr(void)
+"68
+[; ;Proyecto02.c: 68: void __attribute__((picinterrupt(("")))) isr(void)
 [v _isr `(v ~T1 @X0 1 ef ]
-"60
-[; ;Proyecto02.c: 60: {
+"69
+[; ;Proyecto02.c: 69: {
 {
 [e :U _isr ]
 [f ]
-"62
-[; ;Proyecto02.c: 62:        if(PIR1bits.ADIF == 1){
+"71
+[; ;Proyecto02.c: 71:        if(PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
 {
-"63
-[; ;Proyecto02.c: 63:        if(ADCON0bits.CHS == 0) {
+"72
+[; ;Proyecto02.c: 72:        if(ADCON0bits.CHS == 0) {
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 141  ]
 {
-"64
-[; ;Proyecto02.c: 64:              CCPR2L = (ADRESH>>1)+124;
+"73
+[; ;Proyecto02.c: 73:              CCPR2L = (ADRESH>>1)+124;
 [e = _CCPR2L -> + >> -> _ADRESH `i -> 1 `i -> 124 `i `uc ]
-"67
-[; ;Proyecto02.c: 67:            }
+"76
+[; ;Proyecto02.c: 76:            }
 }
 [e $U 142  ]
-"69
-[; ;Proyecto02.c: 69:         else if(ADCON0bits.CHS == 1){
+"78
+[; ;Proyecto02.c: 78:         else if(ADCON0bits.CHS == 1){
 [e :U 141 ]
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 1 `i 143  ]
 {
-"70
-[; ;Proyecto02.c: 70:             CCPR1L = (ADRESH>>1)+124;
+"79
+[; ;Proyecto02.c: 79:             CCPR1L = (ADRESH>>1)+124;
 [e = _CCPR1L -> + >> -> _ADRESH `i -> 1 `i -> 124 `i `uc ]
-"72
-[; ;Proyecto02.c: 72:            }
+"81
+[; ;Proyecto02.c: 81:            }
 }
 [e $U 144  ]
-"74
-[; ;Proyecto02.c: 74:         else if(ADCON0bits.CHS == 2){
+"83
+[; ;Proyecto02.c: 83:         else if(ADCON0bits.CHS == 2){
 [e :U 143 ]
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 2 `i 145  ]
 {
-"75
-[; ;Proyecto02.c: 75:             var = ADRESH;
+"84
+[; ;Proyecto02.c: 84:             var = ADRESH;
 [e = _var -> _ADRESH `i ]
-"77
-[; ;Proyecto02.c: 77:            if (var <= 85){
+"86
+[; ;Proyecto02.c: 86:            if (var <= 85){
 [e $ ! <= _var -> 85 `i 146  ]
 {
-"78
-[; ;Proyecto02.c: 78:               dedo1_3();
+"87
+[; ;Proyecto02.c: 87:               dedo1_3();
 [e ( _dedo1_3 ..  ]
-"80
-[; ;Proyecto02.c: 80:                  }
+"89
+[; ;Proyecto02.c: 89:                  }
 }
 [e :U 146 ]
-"81
-[; ;Proyecto02.c: 81:            if ((var <= 170)&&(var >= 86)){
+"90
+[; ;Proyecto02.c: 90:            if ((var <= 170)&&(var >= 86)){
 [e $ ! && <= _var -> 170 `i >= _var -> 86 `i 147  ]
 {
-"82
-[; ;Proyecto02.c: 82:                dedo1_2();
+"91
+[; ;Proyecto02.c: 91:                dedo1_2();
 [e ( _dedo1_2 ..  ]
-"83
-[; ;Proyecto02.c: 83:                  }
+"92
+[; ;Proyecto02.c: 92:                  }
 }
 [e :U 147 ]
-"84
-[; ;Proyecto02.c: 84:             if (var >= 171){
+"93
+[; ;Proyecto02.c: 93:             if (var >= 171){
 [e $ ! >= _var -> 171 `i 148  ]
 {
-"85
-[; ;Proyecto02.c: 85:                dedo1_1();
+"94
+[; ;Proyecto02.c: 94:                dedo1_1();
 [e ( _dedo1_1 ..  ]
-"86
-[; ;Proyecto02.c: 86:                  }
+"95
+[; ;Proyecto02.c: 95:                  }
 }
 [e :U 148 ]
-"87
-[; ;Proyecto02.c: 87:              }
+"96
+[; ;Proyecto02.c: 96:              }
 }
 [e $U 149  ]
-"88
-[; ;Proyecto02.c: 88:        else if(ADCON0bits.CHS == 3){
+"97
+[; ;Proyecto02.c: 97:        else if(ADCON0bits.CHS == 3){
 [e :U 145 ]
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 3 `i 150  ]
 {
-"89
-[; ;Proyecto02.c: 89:             var = ADRESH;
-[e = _var -> _ADRESH `i ]
-"91
-[; ;Proyecto02.c: 91:            if (var <= 85){
-[e $ ! <= _var -> 85 `i 151  ]
+"98
+[; ;Proyecto02.c: 98:             var1 = ADRESH;
+[e = _var1 -> _ADRESH `i ]
+"100
+[; ;Proyecto02.c: 100:            if (var1 <= 85){
+[e $ ! <= _var1 -> 85 `i 151  ]
 {
-"92
-[; ;Proyecto02.c: 92:               dedo2_3();
+"101
+[; ;Proyecto02.c: 101:               dedo2_3();
 [e ( _dedo2_3 ..  ]
-"94
-[; ;Proyecto02.c: 94:                  }
+"103
+[; ;Proyecto02.c: 103:                  }
 }
 [e :U 151 ]
-"95
-[; ;Proyecto02.c: 95:            if ((var <= 170)&&(var >= 86)){
-[e $ ! && <= _var -> 170 `i >= _var -> 86 `i 152  ]
+"104
+[; ;Proyecto02.c: 104:            if ((var1 <= 170)&&(var1 >= 86)){
+[e $ ! && <= _var1 -> 170 `i >= _var1 -> 86 `i 152  ]
 {
-"96
-[; ;Proyecto02.c: 96:                dedo2_2();
+"105
+[; ;Proyecto02.c: 105:                dedo2_2();
 [e ( _dedo2_2 ..  ]
-"97
-[; ;Proyecto02.c: 97:                  }
+"106
+[; ;Proyecto02.c: 106:                  }
 }
 [e :U 152 ]
-"98
-[; ;Proyecto02.c: 98:             if (var >= 171){
-[e $ ! >= _var -> 171 `i 153  ]
+"107
+[; ;Proyecto02.c: 107:             if (var1 >= 171){
+[e $ ! >= _var1 -> 171 `i 153  ]
 {
-"99
-[; ;Proyecto02.c: 99:                dedo2_1();
+"108
+[; ;Proyecto02.c: 108:                dedo2_1();
 [e ( _dedo2_1 ..  ]
-"100
-[; ;Proyecto02.c: 100:                  }
+"109
+[; ;Proyecto02.c: 109:                  }
 }
 [e :U 153 ]
-"101
-[; ;Proyecto02.c: 101:              }
+"110
+[; ;Proyecto02.c: 110:              }
 }
 [e $U 154  ]
-"102
-[; ;Proyecto02.c: 102:        else if(ADCON0bits.CHS == 4){
+"111
+[; ;Proyecto02.c: 111:        else if(ADCON0bits.CHS == 4){
 [e :U 150 ]
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 4 `i 155  ]
 {
-"103
-[; ;Proyecto02.c: 103:             var = ADRESH;
-[e = _var -> _ADRESH `i ]
-"105
-[; ;Proyecto02.c: 105:            if (var <= 85){
-[e $ ! <= _var -> 85 `i 156  ]
+"112
+[; ;Proyecto02.c: 112:             var2 = ADRESH;
+[e = _var2 -> _ADRESH `i ]
+"114
+[; ;Proyecto02.c: 114:            if (var2 <= 85){
+[e $ ! <= _var2 -> 85 `i 156  ]
 {
-"106
-[; ;Proyecto02.c: 106:               dedo3_3();
+"115
+[; ;Proyecto02.c: 115:               dedo3_3();
 [e ( _dedo3_3 ..  ]
-"108
-[; ;Proyecto02.c: 108:                  }
+"116
+[; ;Proyecto02.c: 116:                  }
 }
 [e :U 156 ]
-"109
-[; ;Proyecto02.c: 109:            if ((var <= 170)&&(var >= 86)){
-[e $ ! && <= _var -> 170 `i >= _var -> 86 `i 157  ]
+"117
+[; ;Proyecto02.c: 117:            if ((var2 <= 170)&&(var2 >= 86)){
+[e $ ! && <= _var2 -> 170 `i >= _var2 -> 86 `i 157  ]
 {
-"110
-[; ;Proyecto02.c: 110:                dedo3_2();
+"118
+[; ;Proyecto02.c: 118:                dedo3_2();
 [e ( _dedo3_2 ..  ]
-"111
-[; ;Proyecto02.c: 111:                  }
+"119
+[; ;Proyecto02.c: 119:                  }
 }
 [e :U 157 ]
-"112
-[; ;Proyecto02.c: 112:             if (var >= 171){
-[e $ ! >= _var -> 171 `i 158  ]
+"120
+[; ;Proyecto02.c: 120:             if (var2 >= 171){
+[e $ ! >= _var2 -> 171 `i 158  ]
 {
-"113
-[; ;Proyecto02.c: 113:                dedo3_1();
+"121
+[; ;Proyecto02.c: 121:                dedo3_1();
 [e ( _dedo3_1 ..  ]
-"114
-[; ;Proyecto02.c: 114:                  }
+"122
+[; ;Proyecto02.c: 122:                  }
 }
 [e :U 158 ]
-"115
-[; ;Proyecto02.c: 115:              }
+"123
+[; ;Proyecto02.c: 123:              }
 }
 [e :U 155 ]
 [e :U 154 ]
 [e :U 149 ]
 [e :U 144 ]
 [e :U 142 ]
-"117
-[; ;Proyecto02.c: 117:            _delay((unsigned long)((50)*(8000000/4000000.0)));
+"125
+[; ;Proyecto02.c: 125:            _delay((unsigned long)((50)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"118
-[; ;Proyecto02.c: 118:            PIR1bits.ADIF = 0;
+"126
+[; ;Proyecto02.c: 126:            PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"119
-[; ;Proyecto02.c: 119:        }
+"127
+[; ;Proyecto02.c: 127:        }
 }
 [e :U 140 ]
-"122
-[; ;Proyecto02.c: 122:        if (RBIF == 1)
-[e $ ! == -> _RBIF `i -> 1 `i 159  ]
-"123
-[; ;Proyecto02.c: 123:     {
-{
-"124
-[; ;Proyecto02.c: 124:         if (PORTBbits.RB1 == 0)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 160  ]
-"125
-[; ;Proyecto02.c: 125:         {
-{
-"126
-[; ;Proyecto02.c: 126:             PORTBbits.RB7 = 1;
-[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"127
-[; ;Proyecto02.c: 127:         }
-}
-[e $U 161  ]
-"128
-[; ;Proyecto02.c: 128:         else if (PORTBbits.RB0 == 0)
-[e :U 160 ]
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 162  ]
-"129
-[; ;Proyecto02.c: 129:         {
-{
 "130
-[; ;Proyecto02.c: 130:             PORTBbits.RB6 = 1;
-[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 130:        if (RBIF == 1)
+[e $ ! == -> _RBIF `i -> 1 `i 159  ]
 "131
-[; ;Proyecto02.c: 131:         }
-}
-[e $U 163  ]
-"132
-[; ;Proyecto02.c: 132:         else {
-[e :U 162 ]
+[; ;Proyecto02.c: 131:     {
 {
+"132
+[; ;Proyecto02.c: 132:         if (PORTBbits.RB1 == 0)
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 160  ]
 "133
-[; ;Proyecto02.c: 133:             PORTBbits.RB6 = 0;
-[e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 133:         {
+{
 "134
-[; ;Proyecto02.c: 134:             PORTBbits.RB7 = 0;
-[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 134:             ADCON0bits.ADON = 0;
+[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
 "135
-[; ;Proyecto02.c: 135:         }
+[; ;Proyecto02.c: 135:             PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"136
+[; ;Proyecto02.c: 136:             lectura_01 = read_eeprom (0x17);
+[e = _lectura_01 -> ( _read_eeprom (1 -> -> 23 `i `uc `i ]
+"137
+[; ;Proyecto02.c: 137:             lectura_02 = read_eeprom (0x18);
+[e = _lectura_02 -> ( _read_eeprom (1 -> -> 24 `i `uc `i ]
+"138
+[; ;Proyecto02.c: 138:             lectura_03 = read_eeprom (0x19);
+[e = _lectura_03 -> ( _read_eeprom (1 -> -> 25 `i `uc `i ]
+"139
+[; ;Proyecto02.c: 139:             if (lectura_01 <= 85){
+[e $ ! <= _lectura_01 -> 85 `i 161  ]
+{
+"140
+[; ;Proyecto02.c: 140:               dedo1_3();
+[e ( _dedo1_3 ..  ]
+"142
+[; ;Proyecto02.c: 142:                  }
+}
+[e :U 161 ]
+"143
+[; ;Proyecto02.c: 143:            if ((lectura_01 <= 170)&&(lectura_01 >= 86)){
+[e $ ! && <= _lectura_01 -> 170 `i >= _lectura_01 -> 86 `i 162  ]
+{
+"144
+[; ;Proyecto02.c: 144:                dedo1_2();
+[e ( _dedo1_2 ..  ]
+"145
+[; ;Proyecto02.c: 145:                  }
+}
+[e :U 162 ]
+"146
+[; ;Proyecto02.c: 146:             if (lectura_01 >= 171){
+[e $ ! >= _lectura_01 -> 171 `i 163  ]
+{
+"147
+[; ;Proyecto02.c: 147:                dedo1_1();
+[e ( _dedo1_1 ..  ]
+"148
+[; ;Proyecto02.c: 148:                  }
 }
 [e :U 163 ]
-[e :U 161 ]
-"136
-[; ;Proyecto02.c: 136:         INTCONbits.RBIF = 0;
+"149
+[; ;Proyecto02.c: 149:             if (lectura_02 <= 85){
+[e $ ! <= _lectura_02 -> 85 `i 164  ]
+{
+"150
+[; ;Proyecto02.c: 150:               dedo2_3();
+[e ( _dedo2_3 ..  ]
+"152
+[; ;Proyecto02.c: 152:                  }
+}
+[e :U 164 ]
+"153
+[; ;Proyecto02.c: 153:            if ((lectura_02 <= 170)&&(lectura_02 >= 86)){
+[e $ ! && <= _lectura_02 -> 170 `i >= _lectura_02 -> 86 `i 165  ]
+{
+"154
+[; ;Proyecto02.c: 154:                dedo2_2();
+[e ( _dedo2_2 ..  ]
+"155
+[; ;Proyecto02.c: 155:                  }
+}
+[e :U 165 ]
+"156
+[; ;Proyecto02.c: 156:             if (lectura_02 >= 171){
+[e $ ! >= _lectura_02 -> 171 `i 166  ]
+{
+"157
+[; ;Proyecto02.c: 157:                dedo2_1();
+[e ( _dedo2_1 ..  ]
+"158
+[; ;Proyecto02.c: 158:                  }
+}
+[e :U 166 ]
+"159
+[; ;Proyecto02.c: 159:             if (lectura_03 <= 85){
+[e $ ! <= _lectura_03 -> 85 `i 167  ]
+{
+"160
+[; ;Proyecto02.c: 160:               dedo3_3();
+[e ( _dedo3_3 ..  ]
+"161
+[; ;Proyecto02.c: 161:                  }
+}
+[e :U 167 ]
+"162
+[; ;Proyecto02.c: 162:            if ((lectura_03 <= 170)&&(lectura_03 >= 86)){
+[e $ ! && <= _lectura_03 -> 170 `i >= _lectura_03 -> 86 `i 168  ]
+{
+"163
+[; ;Proyecto02.c: 163:                dedo3_2();
+[e ( _dedo3_2 ..  ]
+"164
+[; ;Proyecto02.c: 164:                  }
+}
+[e :U 168 ]
+"165
+[; ;Proyecto02.c: 165:             if (lectura_03 >= 171){
+[e $ ! >= _lectura_03 -> 171 `i 169  ]
+{
+"166
+[; ;Proyecto02.c: 166:                dedo3_1();
+[e ( _dedo3_1 ..  ]
+"167
+[; ;Proyecto02.c: 167:                  }
+}
+[e :U 169 ]
+"168
+[; ;Proyecto02.c: 168:             _delay((unsigned long)((2000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"169
+[; ;Proyecto02.c: 169:             ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"170
+[; ;Proyecto02.c: 170:         }
+}
+[e $U 170  ]
+"171
+[; ;Proyecto02.c: 171:         else if (PORTBbits.RB0 == 0)
+[e :U 160 ]
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 171  ]
+"172
+[; ;Proyecto02.c: 172:         {
+{
+"173
+[; ;Proyecto02.c: 173:             PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+"174
+[; ;Proyecto02.c: 174:             write_eeprom (var, 0x17);
+[e ( _write_eeprom (2 , -> _var `uc -> -> 23 `i `uc ]
+"175
+[; ;Proyecto02.c: 175:             write_eeprom (var1, 0x18);
+[e ( _write_eeprom (2 , -> _var1 `uc -> -> 24 `i `uc ]
+"176
+[; ;Proyecto02.c: 176:             write_eeprom (var2, 0x19);
+[e ( _write_eeprom (2 , -> _var2 `uc -> -> 25 `i `uc ]
+"177
+[; ;Proyecto02.c: 177:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"178
+[; ;Proyecto02.c: 178:         }
+}
+[e $U 172  ]
+"179
+[; ;Proyecto02.c: 179:         else {
+[e :U 171 ]
+{
+"180
+[; ;Proyecto02.c: 180:             PORTBbits.RB6 = 0;
+[e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
+"181
+[; ;Proyecto02.c: 181:             PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"182
+[; ;Proyecto02.c: 182:         }
+}
+[e :U 172 ]
+[e :U 170 ]
+"183
+[; ;Proyecto02.c: 183:         INTCONbits.RBIF = 0;
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"137
-[; ;Proyecto02.c: 137:         }
+"184
+[; ;Proyecto02.c: 184:         }
 }
 [e :U 159 ]
-"138
-[; ;Proyecto02.c: 138:     }
+"185
+[; ;Proyecto02.c: 185:     }
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"143
-[; ;Proyecto02.c: 143: void main(void) {
+"190
+[; ;Proyecto02.c: 190: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"145
-[; ;Proyecto02.c: 145:     setup();
+"192
+[; ;Proyecto02.c: 192:     setup();
 [e ( _setup ..  ]
-"147
-[; ;Proyecto02.c: 147:     while(1)
-[e :U 166 ]
-"148
-[; ;Proyecto02.c: 148:     {
+"194
+[; ;Proyecto02.c: 194:     while(1)
+[e :U 175 ]
+"195
+[; ;Proyecto02.c: 195:     {
 {
-"149
-[; ;Proyecto02.c: 149:       chanel();
+"196
+[; ;Proyecto02.c: 196:       chanel();
 [e ( _chanel ..  ]
-"151
-[; ;Proyecto02.c: 151:     }
+"198
+[; ;Proyecto02.c: 198:     }
 }
-[e :U 165 ]
-[e $U 166  ]
-[e :U 167 ]
-"152
-[; ;Proyecto02.c: 152: }
-[e :UE 164 ]
+[e :U 174 ]
+[e $U 175  ]
+[e :U 176 ]
+"199
+[; ;Proyecto02.c: 199: }
+[e :UE 173 ]
 }
-"154
-[; ;Proyecto02.c: 154: void setup(void){
+"201
+[; ;Proyecto02.c: 201: void setup(void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"157
-[; ;Proyecto02.c: 157:     ANSEL = 0b00011111;
-[e = _ANSEL -> -> 31 `i `uc ]
-"158
-[; ;Proyecto02.c: 158:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"162
-[; ;Proyecto02.c: 162:     TRISAbits.TRISA0 = 1;
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"163
-[; ;Proyecto02.c: 163:     TRISAbits.TRISA1 = 1;
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-"164
-[; ;Proyecto02.c: 164:     TRISAbits.TRISA2 = 1;
-[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
-"165
-[; ;Proyecto02.c: 165:     TRISAbits.TRISA3 = 1;
-[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
-"166
-[; ;Proyecto02.c: 166:     TRISAbits.TRISA5 = 1;
-[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
-"170
-[; ;Proyecto02.c: 170:     TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-"171
-[; ;Proyecto02.c: 171:     TRISBbits.TRISB1 = 1;
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
-"172
-[; ;Proyecto02.c: 172:     TRISBbits.TRISB6 = 0;
-[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
-"173
-[; ;Proyecto02.c: 173:     TRISBbits.TRISB7 = 0;
-[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-"177
-[; ;Proyecto02.c: 177:     TRISDbits.TRISD0 = 0;
-[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-"178
-[; ;Proyecto02.c: 178:     TRISDbits.TRISD1 = 0;
-[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-"179
-[; ;Proyecto02.c: 179:     TRISDbits.TRISD2 = 0;
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-"182
-[; ;Proyecto02.c: 182:     PORTA = 0x00;
-[e = _PORTA -> -> 0 `i `uc ]
-"183
-[; ;Proyecto02.c: 183:     PORTB = 0x00;
-[e = _PORTB -> -> 0 `i `uc ]
-"184
-[; ;Proyecto02.c: 184:     PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"185
-[; ;Proyecto02.c: 185:     PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
-"188
-[; ;Proyecto02.c: 188:     OPTION_REGbits.nRBPU = 0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"189
-[; ;Proyecto02.c: 189:     WPUBbits.WPUB = 0b00000011;
-[e = . . _WPUBbits 0 0 -> -> 3 `i `uc ]
-"192
-[; ;Proyecto02.c: 192:     IOCBbits.IOCB = 0b00000011;
-[e = . . _IOCBbits 0 0 -> -> 3 `i `uc ]
-"195
-[; ;Proyecto02.c: 195:     OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"196
-[; ;Proyecto02.c: 196:     OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"197
-[; ;Proyecto02.c: 197:     OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"198
-[; ;Proyecto02.c: 198:     OSCCONbits.SCS = 1;
-[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"201
-[; ;Proyecto02.c: 201:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"202
-[; ;Proyecto02.c: 202:     INTCONbits.RBIF = 1;
-[e = . . _INTCONbits 0 0 -> -> 1 `i `uc ]
-"203
-[; ;Proyecto02.c: 203:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "204
-[; ;Proyecto02.c: 204:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 204:     ANSEL = 0b00011111;
+[e = _ANSEL -> -> 31 `i `uc ]
 "205
-[; ;Proyecto02.c: 205:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"206
-[; ;Proyecto02.c: 206:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 205:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
 "209
-[; ;Proyecto02.c: 209:     ADCON0bits.ADCS0 = 0;
-[e = . . _ADCON0bits 1 6 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 209:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 "210
-[; ;Proyecto02.c: 210:     ADCON0bits.ADCS1 = 1;
-[e = . . _ADCON0bits 1 7 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 210:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
 "211
-[; ;Proyecto02.c: 211:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 211:     TRISAbits.TRISA2 = 1;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
 "212
-[; ;Proyecto02.c: 212:     ADCON0bits.CHS = 0;
-[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 212:     TRISAbits.TRISA3 = 1;
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
 "213
-[; ;Proyecto02.c: 213:     _delay((unsigned long)((50)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"215
-[; ;Proyecto02.c: 215:     ADCON1bits.ADFM = 0;
-[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
-"216
-[; ;Proyecto02.c: 216:     ADCON1bits.VCFG0 = 0;
-[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 213:     TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
 "217
-[; ;Proyecto02.c: 217:     ADCON1bits.VCFG1 = 0;
-[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 217:     TRISBbits.TRISB0 = 1;
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+"218
+[; ;Proyecto02.c: 218:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"219
+[; ;Proyecto02.c: 219:     TRISBbits.TRISB6 = 0;
+[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
 "220
-[; ;Proyecto02.c: 220:     TRISCbits.TRISC1 = 1;
-[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
-"221
-[; ;Proyecto02.c: 221:     TRISCbits.TRISC2 = 1;
-[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
-"223
-[; ;Proyecto02.c: 223:     PR2 = 250;
-[e = _PR2 -> -> 250 `i `uc ]
+[; ;Proyecto02.c: 220:     TRISBbits.TRISB7 = 0;
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
 "224
-[; ;Proyecto02.c: 224:     CCP1CONbits.P1M = 0;
-[e = . . _CCP1CONbits 0 2 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 224:     TRISDbits.TRISD0 = 0;
+[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
 "225
-[; ;Proyecto02.c: 225:     CCP1CONbits.CCP1M = 0b1100;
-[e = . . _CCP1CONbits 0 0 -> -> 12 `i `uc ]
+[; ;Proyecto02.c: 225:     TRISDbits.TRISD1 = 0;
+[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
 "226
-[; ;Proyecto02.c: 226:     CCP2CONbits.CCP2M = 0b1100;
-[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
-"228
-[; ;Proyecto02.c: 228:     CCPR1L = 0x0f;
-[e = _CCPR1L -> -> 15 `i `uc ]
+[; ;Proyecto02.c: 226:     TRISDbits.TRISD2 = 0;
+[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
 "229
-[; ;Proyecto02.c: 229:     CCP1CONbits.DC1B = 0;
-[e = . . _CCP1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 229:     PORTA = 0x00;
+[e = _PORTA -> -> 0 `i `uc ]
+"230
+[; ;Proyecto02.c: 230:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
 "231
-[; ;Proyecto02.c: 231:     PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 231:     PORTC = 0x00;
+[e = _PORTC -> -> 0 `i `uc ]
 "232
-[; ;Proyecto02.c: 232:     T2CONbits.T2CKPS = 0b11;
-[e = . . _T2CONbits 0 0 -> -> 3 `i `uc ]
-"233
-[; ;Proyecto02.c: 233:     T2CONbits.TMR2ON = 1;
-[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 232:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
 "235
-[; ;Proyecto02.c: 235:     while(PIR1bits.TMR2IF == 0);
-[e $U 169  ]
-[e :U 170 ]
-[e :U 169 ]
-[e $ == -> . . _PIR1bits 0 1 `i -> 0 `i 170  ]
-[e :U 171 ]
+[; ;Proyecto02.c: 235:     OPTION_REGbits.nRBPU = 0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "236
-[; ;Proyecto02.c: 236:     PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 236:     WPUBbits.WPUB = 0b00000011;
+[e = . . _WPUBbits 0 0 -> -> 3 `i `uc ]
 "239
-[; ;Proyecto02.c: 239:     TRISCbits.TRISC1 = 0;
-[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"240
-[; ;Proyecto02.c: 240:     TRISCbits.TRISC2 = 0;
-[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+[; ;Proyecto02.c: 239:     IOCBbits.IOCB = 0b00000011;
+[e = . . _IOCBbits 0 0 -> -> 3 `i `uc ]
 "242
-[; ;Proyecto02.c: 242: }
-[e :UE 168 ]
-}
+[; ;Proyecto02.c: 242:     OSCCONbits.IRCF2 = 1;
+[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
+"243
+[; ;Proyecto02.c: 243:     OSCCONbits.IRCF1 = 1;
+[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
+"244
+[; ;Proyecto02.c: 244:     OSCCONbits.IRCF0 = 1;
+[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "245
-[; ;Proyecto02.c: 245: void chanel(void){
+[; ;Proyecto02.c: 245:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"248
+[; ;Proyecto02.c: 248:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"249
+[; ;Proyecto02.c: 249:     INTCONbits.RBIF = 1;
+[e = . . _INTCONbits 0 0 -> -> 1 `i `uc ]
+"250
+[; ;Proyecto02.c: 250:     INTCONbits.RBIE = 1;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"251
+[; ;Proyecto02.c: 251:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"252
+[; ;Proyecto02.c: 252:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"253
+[; ;Proyecto02.c: 253:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"256
+[; ;Proyecto02.c: 256:     ADCON0bits.ADCS0 = 0;
+[e = . . _ADCON0bits 1 6 -> -> 0 `i `uc ]
+"257
+[; ;Proyecto02.c: 257:     ADCON0bits.ADCS1 = 1;
+[e = . . _ADCON0bits 1 7 -> -> 1 `i `uc ]
+"258
+[; ;Proyecto02.c: 258:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"259
+[; ;Proyecto02.c: 259:     ADCON0bits.CHS = 0;
+[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
+"260
+[; ;Proyecto02.c: 260:     _delay((unsigned long)((50)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"262
+[; ;Proyecto02.c: 262:     ADCON1bits.ADFM = 0;
+[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
+"263
+[; ;Proyecto02.c: 263:     ADCON1bits.VCFG0 = 0;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"264
+[; ;Proyecto02.c: 264:     ADCON1bits.VCFG1 = 0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+"267
+[; ;Proyecto02.c: 267:     TRISCbits.TRISC1 = 1;
+[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
+"268
+[; ;Proyecto02.c: 268:     TRISCbits.TRISC2 = 1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
+"270
+[; ;Proyecto02.c: 270:     PR2 = 250;
+[e = _PR2 -> -> 250 `i `uc ]
+"271
+[; ;Proyecto02.c: 271:     CCP1CONbits.P1M = 0;
+[e = . . _CCP1CONbits 0 2 -> -> 0 `i `uc ]
+"272
+[; ;Proyecto02.c: 272:     CCP1CONbits.CCP1M = 0b1100;
+[e = . . _CCP1CONbits 0 0 -> -> 12 `i `uc ]
+"273
+[; ;Proyecto02.c: 273:     CCP2CONbits.CCP2M = 0b1100;
+[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
+"275
+[; ;Proyecto02.c: 275:     CCPR1L = 0x0f;
+[e = _CCPR1L -> -> 15 `i `uc ]
+"276
+[; ;Proyecto02.c: 276:     CCP1CONbits.DC1B = 0;
+[e = . . _CCP1CONbits 0 1 -> -> 0 `i `uc ]
+"278
+[; ;Proyecto02.c: 278:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"279
+[; ;Proyecto02.c: 279:     T2CONbits.T2CKPS = 0b11;
+[e = . . _T2CONbits 0 0 -> -> 3 `i `uc ]
+"280
+[; ;Proyecto02.c: 280:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"282
+[; ;Proyecto02.c: 282:     while(PIR1bits.TMR2IF == 0);
+[e $U 178  ]
+[e :U 179 ]
+[e :U 178 ]
+[e $ == -> . . _PIR1bits 0 1 `i -> 0 `i 179  ]
+[e :U 180 ]
+"283
+[; ;Proyecto02.c: 283:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"286
+[; ;Proyecto02.c: 286:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"287
+[; ;Proyecto02.c: 287:     TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"289
+[; ;Proyecto02.c: 289: }
+[e :UE 177 ]
+}
+"292
+[; ;Proyecto02.c: 292: void chanel(void){
 [v _chanel `(v ~T0 @X0 1 ef ]
 {
 [e :U _chanel ]
 [f ]
-"247
-[; ;Proyecto02.c: 247:     if(ADCON0bits.GO == 0){
-[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 173  ]
+"294
+[; ;Proyecto02.c: 294:     if(ADCON0bits.GO == 0){
+[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 182  ]
 {
-"248
-[; ;Proyecto02.c: 248:             if(ADCON0bits.CHS == 0){
-[e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 174  ]
+"295
+[; ;Proyecto02.c: 295:             if(ADCON0bits.CHS == 0){
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 183  ]
 {
-"249
-[; ;Proyecto02.c: 249:                 ADCON0bits.CHS = 1;
+"296
+[; ;Proyecto02.c: 296:                 ADCON0bits.CHS = 1;
 [e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
-"250
-[; ;Proyecto02.c: 250:             }
+"297
+[; ;Proyecto02.c: 297:             }
 }
-[e $U 175  ]
-"251
-[; ;Proyecto02.c: 251:             else if (ADCON0bits.CHS == 1){
-[e :U 174 ]
-[e $ ! == -> . . _ADCON0bits 0 2 `i -> 1 `i 176  ]
+[e $U 184  ]
+"298
+[; ;Proyecto02.c: 298:             else if (ADCON0bits.CHS == 1){
+[e :U 183 ]
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 1 `i 185  ]
 {
-"252
-[; ;Proyecto02.c: 252:                 ADCON0bits.CHS = 2;
+"299
+[; ;Proyecto02.c: 299:                 ADCON0bits.CHS = 2;
 [e = . . _ADCON0bits 0 2 -> -> 2 `i `uc ]
-"253
-[; ;Proyecto02.c: 253:             }
+"300
+[; ;Proyecto02.c: 300:             }
 }
-[e $U 177  ]
-"254
-[; ;Proyecto02.c: 254:             else if (ADCON0bits.CHS == 2){
-[e :U 176 ]
-[e $ ! == -> . . _ADCON0bits 0 2 `i -> 2 `i 178  ]
+[e $U 186  ]
+"301
+[; ;Proyecto02.c: 301:             else if (ADCON0bits.CHS == 2){
+[e :U 185 ]
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 2 `i 187  ]
 {
-"255
-[; ;Proyecto02.c: 255:                 ADCON0bits.CHS = 3;
+"302
+[; ;Proyecto02.c: 302:                 ADCON0bits.CHS = 3;
 [e = . . _ADCON0bits 0 2 -> -> 3 `i `uc ]
-"256
-[; ;Proyecto02.c: 256:             }
+"303
+[; ;Proyecto02.c: 303:             }
 }
-[e $U 179  ]
-"257
-[; ;Proyecto02.c: 257:             else if (ADCON0bits.CHS == 3){
-[e :U 178 ]
-[e $ ! == -> . . _ADCON0bits 0 2 `i -> 3 `i 180  ]
+[e $U 188  ]
+"304
+[; ;Proyecto02.c: 304:             else if (ADCON0bits.CHS == 3){
+[e :U 187 ]
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 3 `i 189  ]
 {
-"258
-[; ;Proyecto02.c: 258:                 ADCON0bits.CHS = 4;
+"305
+[; ;Proyecto02.c: 305:                 ADCON0bits.CHS = 4;
 [e = . . _ADCON0bits 0 2 -> -> 4 `i `uc ]
-"259
-[; ;Proyecto02.c: 259:             }
+"306
+[; ;Proyecto02.c: 306:             }
 }
-[e $U 181  ]
-"260
-[; ;Proyecto02.c: 260:             else if (ADCON0bits.CHS == 4){
-[e :U 180 ]
-[e $ ! == -> . . _ADCON0bits 0 2 `i -> 4 `i 182  ]
+[e $U 190  ]
+"307
+[; ;Proyecto02.c: 307:             else if (ADCON0bits.CHS == 4){
+[e :U 189 ]
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 4 `i 191  ]
 {
-"261
-[; ;Proyecto02.c: 261:                 ADCON0bits.CHS = 0;
+"308
+[; ;Proyecto02.c: 308:                 ADCON0bits.CHS = 0;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
-"262
-[; ;Proyecto02.c: 262:             }
+"309
+[; ;Proyecto02.c: 309:             }
+}
+[e :U 191 ]
+[e :U 190 ]
+[e :U 188 ]
+[e :U 186 ]
+[e :U 184 ]
+"311
+[; ;Proyecto02.c: 311:             _delay((unsigned long)((50)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"312
+[; ;Proyecto02.c: 312:             ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"313
+[; ;Proyecto02.c: 313:         }
 }
 [e :U 182 ]
-[e :U 181 ]
-[e :U 179 ]
-[e :U 177 ]
-[e :U 175 ]
-"264
-[; ;Proyecto02.c: 264:             _delay((unsigned long)((50)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"265
-[; ;Proyecto02.c: 265:             ADCON0bits.GO = 1;
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"266
-[; ;Proyecto02.c: 266:         }
+"314
+[; ;Proyecto02.c: 314: }
+[e :UE 181 ]
 }
-[e :U 173 ]
-"267
-[; ;Proyecto02.c: 267: }
-[e :UE 172 ]
-}
-"269
-[; ;Proyecto02.c: 269: void dedo1_1(void){
+"316
+[; ;Proyecto02.c: 316: void dedo1_1(void){
 [v _dedo1_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_1 ]
 [f ]
-"270
-[; ;Proyecto02.c: 270:     PORTDbits.RD0 = 1;
+"317
+[; ;Proyecto02.c: 317:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"271
-[; ;Proyecto02.c: 271:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"318
+[; ;Proyecto02.c: 318:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"272
-[; ;Proyecto02.c: 272:     PORTDbits.RD0 = 0;
+"319
+[; ;Proyecto02.c: 319:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"273
-[; ;Proyecto02.c: 273:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"320
+[; ;Proyecto02.c: 320:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"274
-[; ;Proyecto02.c: 274:     }
-[e :UE 183 ]
+"321
+[; ;Proyecto02.c: 321:     }
+[e :UE 192 ]
 }
-"276
-[; ;Proyecto02.c: 276: void dedo1_2(void){
+"323
+[; ;Proyecto02.c: 323: void dedo1_2(void){
 [v _dedo1_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_2 ]
 [f ]
-"277
-[; ;Proyecto02.c: 277:     PORTDbits.RD0 = 1;
+"324
+[; ;Proyecto02.c: 324:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"278
-[; ;Proyecto02.c: 278:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"325
+[; ;Proyecto02.c: 325:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"279
-[; ;Proyecto02.c: 279:     PORTDbits.RD0 = 0;
+"326
+[; ;Proyecto02.c: 326:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"280
-[; ;Proyecto02.c: 280:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"327
+[; ;Proyecto02.c: 327:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"281
-[; ;Proyecto02.c: 281:     }
-[e :UE 184 ]
+"328
+[; ;Proyecto02.c: 328:     }
+[e :UE 193 ]
 }
-"283
-[; ;Proyecto02.c: 283: void dedo1_3(void){
+"330
+[; ;Proyecto02.c: 330: void dedo1_3(void){
 [v _dedo1_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_3 ]
 [f ]
-"284
-[; ;Proyecto02.c: 284:     PORTDbits.RD0 = 1;
+"331
+[; ;Proyecto02.c: 331:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"285
-[; ;Proyecto02.c: 285:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"332
+[; ;Proyecto02.c: 332:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"286
-[; ;Proyecto02.c: 286:     PORTDbits.RD0 = 0;
+"333
+[; ;Proyecto02.c: 333:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"287
-[; ;Proyecto02.c: 287:     _delay((unsigned long)((18)*(8000000/4000.0)));
+"334
+[; ;Proyecto02.c: 334:     _delay((unsigned long)((18)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 18 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"288
-[; ;Proyecto02.c: 288:     }
-[e :UE 185 ]
+"335
+[; ;Proyecto02.c: 335:     }
+[e :UE 194 ]
 }
-"290
-[; ;Proyecto02.c: 290: void dedo2_1(void){
+"337
+[; ;Proyecto02.c: 337: void dedo2_1(void){
 [v _dedo2_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_1 ]
 [f ]
-"291
-[; ;Proyecto02.c: 291:     PORTDbits.RD1 = 1;
+"338
+[; ;Proyecto02.c: 338:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"292
-[; ;Proyecto02.c: 292:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"339
+[; ;Proyecto02.c: 339:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"293
-[; ;Proyecto02.c: 293:     PORTDbits.RD1 = 0;
+"340
+[; ;Proyecto02.c: 340:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"294
-[; ;Proyecto02.c: 294:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"341
+[; ;Proyecto02.c: 341:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"295
-[; ;Proyecto02.c: 295:     }
-[e :UE 186 ]
+"342
+[; ;Proyecto02.c: 342:     }
+[e :UE 195 ]
 }
-"297
-[; ;Proyecto02.c: 297: void dedo2_2(void){
+"344
+[; ;Proyecto02.c: 344: void dedo2_2(void){
 [v _dedo2_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_2 ]
 [f ]
-"298
-[; ;Proyecto02.c: 298:     PORTDbits.RD1 = 1;
+"345
+[; ;Proyecto02.c: 345:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"299
-[; ;Proyecto02.c: 299:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"346
+[; ;Proyecto02.c: 346:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"300
-[; ;Proyecto02.c: 300:     PORTDbits.RD1 = 0;
+"347
+[; ;Proyecto02.c: 347:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"301
-[; ;Proyecto02.c: 301:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"348
+[; ;Proyecto02.c: 348:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"302
-[; ;Proyecto02.c: 302:     }
-[e :UE 187 ]
+"349
+[; ;Proyecto02.c: 349:     }
+[e :UE 196 ]
 }
-"304
-[; ;Proyecto02.c: 304: void dedo2_3(void){
+"351
+[; ;Proyecto02.c: 351: void dedo2_3(void){
 [v _dedo2_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_3 ]
 [f ]
-"305
-[; ;Proyecto02.c: 305:     PORTDbits.RD1 = 1;
+"352
+[; ;Proyecto02.c: 352:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"306
-[; ;Proyecto02.c: 306:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"353
+[; ;Proyecto02.c: 353:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"307
-[; ;Proyecto02.c: 307:     PORTDbits.RD1 = 0;
+"354
+[; ;Proyecto02.c: 354:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"308
-[; ;Proyecto02.c: 308:     _delay((unsigned long)((17)*(8000000/4000.0)));
+"355
+[; ;Proyecto02.c: 355:     _delay((unsigned long)((17)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 17 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"309
-[; ;Proyecto02.c: 309:     }
-[e :UE 188 ]
+"356
+[; ;Proyecto02.c: 356:     }
+[e :UE 197 ]
 }
-"311
-[; ;Proyecto02.c: 311: void dedo3_1(void){
+"358
+[; ;Proyecto02.c: 358: void dedo3_1(void){
 [v _dedo3_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_1 ]
 [f ]
-"312
-[; ;Proyecto02.c: 312:     PORTDbits.RD2 = 1;
+"359
+[; ;Proyecto02.c: 359:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"313
-[; ;Proyecto02.c: 313:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"360
+[; ;Proyecto02.c: 360:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"314
-[; ;Proyecto02.c: 314:     PORTDbits.RD2 = 0;
+"361
+[; ;Proyecto02.c: 361:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"315
-[; ;Proyecto02.c: 315:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"362
+[; ;Proyecto02.c: 362:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"316
-[; ;Proyecto02.c: 316:     }
-[e :UE 189 ]
+"363
+[; ;Proyecto02.c: 363:     }
+[e :UE 198 ]
 }
-"318
-[; ;Proyecto02.c: 318: void dedo3_2(void){
+"365
+[; ;Proyecto02.c: 365: void dedo3_2(void){
 [v _dedo3_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_2 ]
 [f ]
-"319
-[; ;Proyecto02.c: 319:     PORTDbits.RD2 = 1;
+"366
+[; ;Proyecto02.c: 366:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"320
-[; ;Proyecto02.c: 320:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"367
+[; ;Proyecto02.c: 367:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"321
-[; ;Proyecto02.c: 321:     PORTDbits.RD2 = 0;
+"368
+[; ;Proyecto02.c: 368:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"322
-[; ;Proyecto02.c: 322:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"369
+[; ;Proyecto02.c: 369:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"323
-[; ;Proyecto02.c: 323:     }
-[e :UE 190 ]
+"370
+[; ;Proyecto02.c: 370:     }
+[e :UE 199 ]
 }
-"325
-[; ;Proyecto02.c: 325: void dedo3_3(void){
+"372
+[; ;Proyecto02.c: 372: void dedo3_3(void){
 [v _dedo3_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_3 ]
 [f ]
-"326
-[; ;Proyecto02.c: 326:     PORTDbits.RD2 = 1;
+"373
+[; ;Proyecto02.c: 373:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"327
-[; ;Proyecto02.c: 327:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"374
+[; ;Proyecto02.c: 374:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"328
-[; ;Proyecto02.c: 328:     PORTDbits.RD2 = 0;
+"375
+[; ;Proyecto02.c: 375:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"329
-[; ;Proyecto02.c: 329:     _delay((unsigned long)((17)*(8000000/4000.0)));
+"376
+[; ;Proyecto02.c: 376:     _delay((unsigned long)((17)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 17 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"330
-[; ;Proyecto02.c: 330:     }
-[e :UE 191 ]
+"377
+[; ;Proyecto02.c: 377:     }
+[e :UE 200 ]
+}
+"379
+[; ;Proyecto02.c: 379: void write_eeprom (char dato, char direccion){
+[v _write_eeprom `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _write_eeprom ]
+[v _dato `uc ~T0 @X0 1 r1 ]
+[v _direccion `uc ~T0 @X0 1 r2 ]
+[f ]
+"380
+[; ;Proyecto02.c: 380:     EEADR = direccion;
+[e = _EEADR -> _direccion `uc ]
+"381
+[; ;Proyecto02.c: 381:     EEDAT = dato;
+[e = _EEDAT -> _dato `uc ]
+"384
+[; ;Proyecto02.c: 384:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"386
+[; ;Proyecto02.c: 386:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
+"387
+[; ;Proyecto02.c: 387:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"390
+[; ;Proyecto02.c: 390:     EECON2 = 0x55;
+[e = _EECON2 -> -> 85 `i `uc ]
+"391
+[; ;Proyecto02.c: 391:     EECON2 = 0xAA;
+[e = _EECON2 -> -> 170 `i `uc ]
+"393
+[; ;Proyecto02.c: 393:     EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"395
+[; ;Proyecto02.c: 395:     while(PIR2bits.EEIF == 0);
+[e $U 202  ]
+[e :U 203 ]
+[e :U 202 ]
+[e $ == -> . . _PIR2bits 0 4 `i -> 0 `i 203  ]
+[e :U 204 ]
+"396
+[; ;Proyecto02.c: 396:     PIR2bits.EEIF = 0;
+[e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]
+"398
+[; ;Proyecto02.c: 398:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"399
+[; ;Proyecto02.c: 399: }
+[e :UE 201 ]
+}
+"401
+[; ;Proyecto02.c: 401: char read_eeprom (char direccion){
+[v _read_eeprom `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _read_eeprom ]
+[v _direccion `uc ~T0 @X0 1 r1 ]
+[f ]
+"402
+[; ;Proyecto02.c: 402:     EEADR = direccion;
+[e = _EEADR -> _direccion `uc ]
+"403
+[; ;Proyecto02.c: 403:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
+"404
+[; ;Proyecto02.c: 404:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"405
+[; ;Proyecto02.c: 405:     char dato = EEDATA;
+[v _dato `uc ~T0 @X0 1 a ]
+[e = _dato -> _EEDATA `uc ]
+"406
+[; ;Proyecto02.c: 406:     return dato;
+[e ) _dato ]
+[e $UE 205  ]
+"407
+[; ;Proyecto02.c: 407: }
+[e :UE 205 ]
 }

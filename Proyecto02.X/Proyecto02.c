@@ -37,6 +37,13 @@
 //-----------------------------------------------------------------------------
 
 int var;
+int var1;
+int var2;
+char dato;
+char direccion;
+int lectura_01;
+int lectura_02;
+int lectura_03;
 
 //-----------------------------------------------------------------------------
 //                            Prototipos 
@@ -52,6 +59,8 @@ void dedo2_3(void);
 void dedo3_1(void);
 void dedo3_2(void);
 void dedo3_3(void);
+void write_eeprom (char dato, char direccion);
+char read_eeprom (char direccion);
 
 //-----------------------------------------------------------------------------
 //                            Interrupciones
@@ -86,30 +95,29 @@ void __interrupt() isr(void)
                  }
              }
        else if(ADCON0bits.CHS == 3){        // canal 3
-            var = ADRESH;
+            var1 = ADRESH;
 //            ADCON0bits.CHS = 0;
-           if (var <= 85){
+           if (var1 <= 85){
               dedo2_3();
               
                  }
-           if ((var <= 170)&&(var >= 86)){
+           if ((var1 <= 170)&&(var1 >= 86)){
                dedo2_2();
                  }
-            if (var >= 171){
+            if (var1 >= 171){
                dedo2_1();
                  }
              }
        else if(ADCON0bits.CHS == 4){        // canal 4
-            var = ADRESH;
+            var2 = ADRESH;
 //            ADCON0bits.CHS = 0;
-           if (var <= 85){
+           if (var2 <= 85){
               dedo3_3();
-              
                  }
-           if ((var <= 170)&&(var >= 86)){
+           if ((var2 <= 170)&&(var2 >= 86)){
                dedo3_2();
                  }
-            if (var >= 171){
+            if (var2 >= 171){
                dedo3_1();
                  }
              }
@@ -123,11 +131,50 @@ void __interrupt() isr(void)
     {
         if  (PORTBbits.RB1 == 0)    // Se oprimo el boton 1
         {
+            ADCON0bits.ADON = 0;
             PORTBbits.RB7 = 1;  //
+            lectura_01 = read_eeprom (0x17);
+            lectura_02 = read_eeprom (0x18);
+            lectura_03 = read_eeprom (0x19);
+            if (lectura_01 <= 85){
+              dedo1_3();
+              
+                 }
+           if ((lectura_01 <= 170)&&(lectura_01 >= 86)){  
+               dedo1_2();
+                 }
+            if (lectura_01 >= 171){
+               dedo1_1();
+                 }
+            if (lectura_02 <= 85){
+              dedo2_3();
+              
+                 }
+           if ((lectura_02 <= 170)&&(lectura_02 >= 86)){
+               dedo2_2();
+                 }
+            if (lectura_02 >= 171){
+               dedo2_1();
+                 }
+            if (lectura_03 <= 85){
+              dedo3_3();
+                 }
+           if ((lectura_03 <= 170)&&(lectura_03 >= 86)){
+               dedo3_2();
+                 }
+            if (lectura_03 >= 171){
+               dedo3_1();
+                 }
+            __delay_ms(2000);
+            ADCON0bits.ADON = 1;
         }
         else if  (PORTBbits.RB0 == 0)    // Se oprimo el boton 2
         {
             PORTBbits.RB6 = 1;  //
+            write_eeprom (var,  0x17);
+            write_eeprom (var1, 0x18);
+            write_eeprom (var2, 0x19);
+            __delay_ms(500);
         }
         else {
             PORTBbits.RB6 = 0;
@@ -329,3 +376,32 @@ void dedo3_3(void){
     __delay_ms(17);
     }
 
+void write_eeprom (char dato, char direccion){
+    EEADR = direccion;      // Donde se escribe lo que se graba
+    EEDAT = dato;           // Lo que quiero guardar en la memoria
+    
+    
+    INTCONbits.GIE = 0;     // Se apagan las interrupciones globales
+    
+    EECON1bits.EEPGD = 0;   // Apuntar a la DATA memory
+    EECON1bits.WREN = 1;    // Habilitar la escritura
+    
+     
+    EECON2 = 0x55;          
+    EECON2 = 0xAA;          // El anterior en hexa
+    
+    EECON1bits.WR = 1;      // Se inicia la escritura
+    
+    while(PIR2bits.EEIF == 0);//Para darle tiempo hasta que termine la escritura
+    PIR2bits.EEIF = 0;
+    
+    EECON1bits.WREN = 0;    // Para asegurar que no se este escribiendo
+}
+
+char read_eeprom (char direccion){
+    EEADR = direccion;      // El byte de memoria que se lee
+    EECON1bits.EEPGD = 0;   // Apunta hacia el Program memory
+    EECON1bits.RD = 1;      // Modo lectura activado
+    char dato = EEDATA;     // Se guarda el dato en la variable
+    return dato;            // la operacion regresa a la variable
+}
