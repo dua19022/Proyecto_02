@@ -36,19 +36,19 @@
 //                            Variables 
 //-----------------------------------------------------------------------------
 
-int var;
-int var1;
-int var2;
-int flag_uart;
+char var;
+char var1;
+char var2;
+char flag_uart;
 char dato;
 char direccion;
-int lectura_01;
-int lectura_02;
-int lectura_03;
-int lectura_04;
-int lectura_05;
-int lec_pwm1;
-int lec_pwm2;
+char lectura_01;
+char lectura_02;
+char lectura_03;
+char lectura_04;
+char lectura_05;
+char lec_pwm1;
+char lec_pwm2;
 
 //-----------------------------------------------------------------------------
 //                            Prototipos 
@@ -76,7 +76,7 @@ void __interrupt() isr(void)
 {
         // Interrupcion del ADC
        if(PIR1bits.ADIF == 1){       // Reviso la bandera del ADC
-       if(ADCON0bits.CHS == 0) {             // Si estoy en el canal 0 
+       if(ADCON0bits.CHS == 0) { // Si estoy en el canal 0 
              CCPR2L = (ADRESH>>1)+124;
              lec_pwm1 = ADRESH;
              
@@ -138,18 +138,16 @@ void __interrupt() isr(void)
     {
         if  (PORTBbits.RB1 == 0)    // Se oprimo el boton 1
         {
-            ADCON0bits.ADON = 0;    // Desactivo el ADC
-            PORTBbits.RB7 = 1;      // Prencdo led de estado
-            lectura_01 = read_eeprom (0x17);    // Leo los valores guardados
+            ADCON0bits.ADON = 0;
+            PORTBbits.RB7 = 1;  //
+            lectura_01 = read_eeprom (0x17);
             lectura_02 = read_eeprom (0x18);
             lectura_03 = read_eeprom (0x19);
             lectura_04 = read_eeprom (0x20);
             lectura_05 = read_eeprom (0x21);
             
-            // Realizo las operaciones con los datos que se guardaron
-            
-            CCPR1L = (lectura_04>>1)+124;
-            CCPR2L = (lectura_05>>1)+124;
+            CCPR1L = lectura_04;
+            CCPR2L = lectura_05 ;
             
             
             if (lectura_01 <= 85){
@@ -187,19 +185,21 @@ void __interrupt() isr(void)
         else if  (PORTBbits.RB0 == 0)    // Se oprimo el boton 2
         {
             PORTBbits.RB6 = 1;  //
-            write_eeprom (var,  0x17); // Aqui grabo la variable y la direccion
-            write_eeprom (var1, 0x18); // de los rangos de bitbanging
+            write_eeprom (var,  0x17);
+            write_eeprom (var1, 0x18);
             write_eeprom (var2, 0x19);
-            write_eeprom (lec_pwm1, 0x20); // Estos son lo pwm
-            write_eeprom (lec_pwm2, 0x21); // no guardar valores de +-90
+            write_eeprom (lec_pwm1, 0x20);
+            write_eeprom (lec_pwm2, 0x21);
             __delay_ms(500);
         }
         else if (PORTBbits.RB2 == 0){
             flag_uart = 1;      // Se activa la bandera del usart
             
             while (flag_uart == 1){
-                menu();     // Entra en un loop desactivando todo lo demas
+                TXSTAbits.TXEN = 1;
+                menu();     // Entra en un loop desactivando todo lo demas  
             }   // Hasta desactivar la bandera se sale de la uart
+            TXSTAbits.TXEN = 0;
         }
         else {
             PORTBbits.RB6 = 0;
@@ -218,7 +218,7 @@ void main(void) {
     
     while(1)    // Equivale al loop
     {
-      chanel();  // se llama el cambio de canales
+      chanel();  
   
     }
 }
@@ -312,7 +312,7 @@ void setup(void){
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
   
-       // Configuraciones TX y RX
+    // Configuraciones TX y RX
     TXSTAbits.SYNC = 0;
     TXSTAbits.BRGH = 1;
     BAUDCTLbits.BRG16 = 1;
@@ -324,7 +324,7 @@ void setup(void){
     RCSTAbits.RX9 = 0;
     RCSTAbits.CREN = 1;
     
-    TXSTAbits.TXEN = 1;
+    TXSTAbits.TXEN = 0;
     
     PIR1bits.RCIF = 0;  // Bandera rx
     PIR1bits.TXIF = 0;  // bandera tx
@@ -355,7 +355,6 @@ void chanel(void){  // Se crea rutina para cambio de canales
         }
 }
 
-// Se crean los rangos para los servos en bitbanging
 void dedo1_1(void){
     PORTDbits.RD0 = 1;
     __delay_ms(0.7);
@@ -419,7 +418,6 @@ void dedo3_3(void){
     __delay_ms(17);
     }
 
-// Rutina de la escritura en la EEPROM
 void write_eeprom (char dato, char direccion){
     EEADR = direccion;      // Donde se escribe lo que se graba
     EEDAT = dato;           // Lo que quiero guardar en la memoria
@@ -442,7 +440,6 @@ void write_eeprom (char dato, char direccion){
     EECON1bits.WREN = 0;    // Para asegurar que no se este escribiendo
 }
 
-// Rutina de la lectura de la EEPROM
 char read_eeprom (char direccion){
     EEADR = direccion;      // El byte de memoria que se lee
     EECON1bits.EEPGD = 0;   // Apunta hacia el Program memory
@@ -463,13 +460,11 @@ void menu(void){
     __delay_ms(250); //Tiempos para el despliegue de los caracteres
     printf("\r -----------Bienvenido----------- \r");
     __delay_ms(250);
-    printf("\r Eliga una de las siguientes opciones: \r");
+    printf("\r Elija una de las siguientes opciones: \r");
     __delay_ms(250);
     printf(" 1. Mover motores individuales \r");
     __delay_ms(250);
-    printf(" 2. Elegir una rutina \r");
-    __delay_ms(250);
-    printf(" 3. Salir de la terminal \r");
+    printf(" 2. Salir de la terminal \r");
 
     while (RCIF == 0);
     // Se establecen las opciones del menu
@@ -483,10 +478,6 @@ void menu(void){
         __delay_ms(250);
         printf(" c. Mover motor 3 \r");
         __delay_ms(250);
-        printf(" d. Mover motor 4 \r");
-        __delay_ms(250);
-        printf(" e. Mover motor 5 \r");
-        __delay_ms(250);
         
         while (RCIF == 0);
         
@@ -496,48 +487,36 @@ void menu(void){
             dedo1_3();
         }
         if (RCREG == 'b'){
-            dedo1_1();
+            dedo2_1();
             __delay_ms(2500);
-            dedo1_3();
+            dedo2_3();
         }
         if (RCREG == 'c'){
-            dedo1_1();
+            dedo3_1();
             __delay_ms(2500);
-            dedo1_3();
-        }
-        if (RCREG == 'd'){
-            dedo1_1();
-            __delay_ms(2500);
-            dedo1_3();
-        }
-        if (RCREG == 'e'){
-            dedo1_1();
-            __delay_ms(2500);
-            dedo1_3();
-        }
+            dedo3_3();
+        }        
         else{
             NULL;
         }
     }
-    if (RCREG == '2'){ //segunda opcion del menu
-        printf("\r a. Conteo de 1 a 5: \r");
-    }
-    if (RCREG == '3'){ //tercera opcion del menu
-        printf("\r ¿Esta seguro? \r");
+    if (RCREG == '2'){ //tercera opcion del menu
+        printf("\r Esta seguro? \r");
         __delay_ms(250);
-        printf(" a. Si \r");
+        printf(" d. Si \r");
         __delay_ms(250);
-        printf(" b. No \r");
+        printf(" e. No \r");
         __delay_ms(250);
         
         while (RCIF == 0);
-        if (RCREG == 'a'){
+        if (RCREG == 'd'){
             flag_uart = 0;
+//            TXSTAbits.TXEN = 0;
+            printf(" Gracias por todo \r");
+            __delay_ms(250);
+            
         }
-        else if (RCREG == 'b'){
-            return;
-        }
-        else{
+        else if (RCREG == 'e'){
             NULL;
         }
     }

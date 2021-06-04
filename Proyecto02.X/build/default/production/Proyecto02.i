@@ -2751,19 +2751,19 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 30 "Proyecto02.c" 2
 # 39 "Proyecto02.c"
-int var;
-int var1;
-int var2;
-int flag_uart;
+char var;
+char var1;
+char var2;
+char flag_uart;
 char dato;
 char direccion;
-int lectura_01;
-int lectura_02;
-int lectura_03;
-int lectura_04;
-int lectura_05;
-int lec_pwm1;
-int lec_pwm2;
+char lectura_01;
+char lectura_02;
+char lectura_03;
+char lectura_04;
+char lectura_05;
+char lec_pwm1;
+char lec_pwm2;
 
 
 
@@ -2861,10 +2861,8 @@ void __attribute__((picinterrupt(("")))) isr(void)
             lectura_04 = read_eeprom (0x20);
             lectura_05 = read_eeprom (0x21);
 
-
-
-            CCPR1L = (lectura_04>>1)+124;
-            CCPR2L = (lectura_05>>1)+124;
+            CCPR1L = lectura_04;
+            CCPR2L = lectura_05 ;
 
 
             if (lectura_01 <= 85){
@@ -2913,8 +2911,10 @@ void __attribute__((picinterrupt(("")))) isr(void)
             flag_uart = 1;
 
             while (flag_uart == 1){
+                TXSTAbits.TXEN = 1;
                 menu();
             }
+            TXSTAbits.TXEN = 0;
         }
         else {
             PORTBbits.RB6 = 0;
@@ -3039,7 +3039,7 @@ void setup(void){
     RCSTAbits.RX9 = 0;
     RCSTAbits.CREN = 1;
 
-    TXSTAbits.TXEN = 1;
+    TXSTAbits.TXEN = 0;
 
     PIR1bits.RCIF = 0;
     PIR1bits.TXIF = 0;
@@ -3069,7 +3069,6 @@ void chanel(void){
             ADCON0bits.GO = 1;
         }
 }
-
 
 void dedo1_1(void){
     PORTDbits.RD0 = 1;
@@ -3134,7 +3133,6 @@ void dedo3_3(void){
     _delay((unsigned long)((17)*(8000000/4000.0)));
     }
 
-
 void write_eeprom (char dato, char direccion){
     EEADR = direccion;
     EEDAT = dato;
@@ -3157,7 +3155,6 @@ void write_eeprom (char dato, char direccion){
     EECON1bits.WREN = 0;
 }
 
-
 char read_eeprom (char direccion){
     EEADR = direccion;
     EECON1bits.EEPGD = 0;
@@ -3178,13 +3175,11 @@ void menu(void){
     _delay((unsigned long)((250)*(8000000/4000.0)));
     printf("\r -----------Bienvenido----------- \r");
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf("\r Eliga una de las siguientes opciones: \r");
+    printf("\r Elija una de las siguientes opciones: \r");
     _delay((unsigned long)((250)*(8000000/4000.0)));
     printf(" 1. Mover motores individuales \r");
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf(" 2. Elegir una rutina \r");
-    _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf(" 3. Salir de la terminal \r");
+    printf(" 2. Salir de la terminal \r");
 
     while (RCIF == 0);
 
@@ -3198,10 +3193,6 @@ void menu(void){
         _delay((unsigned long)((250)*(8000000/4000.0)));
         printf(" c. Mover motor 3 \r");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" d. Mover motor 4 \r");
-        _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" e. Mover motor 5 \r");
-        _delay((unsigned long)((250)*(8000000/4000.0)));
 
         while (RCIF == 0);
 
@@ -3211,48 +3202,36 @@ void menu(void){
             dedo1_3();
         }
         if (RCREG == 'b'){
-            dedo1_1();
+            dedo2_1();
             _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo1_3();
+            dedo2_3();
         }
         if (RCREG == 'c'){
-            dedo1_1();
+            dedo3_1();
             _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo1_3();
-        }
-        if (RCREG == 'd'){
-            dedo1_1();
-            _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo1_3();
-        }
-        if (RCREG == 'e'){
-            dedo1_1();
-            _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo1_3();
+            dedo3_3();
         }
         else{
             (0);
         }
     }
     if (RCREG == '2'){
-        printf("\r a. Conteo de 1 a 5: \r");
-    }
-    if (RCREG == '3'){
-        printf("\r ¿Esta seguro? \r");
+        printf("\r Esta seguro? \r");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" a. Si \r");
+        printf(" d. Si \r");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" b. No \r");
+        printf(" e. No \r");
         _delay((unsigned long)((250)*(8000000/4000.0)));
 
         while (RCIF == 0);
-        if (RCREG == 'a'){
+        if (RCREG == 'd'){
             flag_uart = 0;
+
+            printf(" Gracias por todo \r");
+            _delay((unsigned long)((250)*(8000000/4000.0)));
+
         }
-        else if (RCREG == 'b'){
-            return;
-        }
-        else{
+        else if (RCREG == 'e'){
             (0);
         }
     }

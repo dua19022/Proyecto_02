@@ -95,7 +95,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;Proyecto02.c: 67: void write_eeprom (char dato, char direccion);
 [v _write_eeprom `(v ~T0 @X0 0 ef2`uc`uc ]
-"70
+"2562 D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2562:     struct {
+[s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S99 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"2572
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2572:     struct {
+[s S100 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S100 . TXD8 . nTX8 ]
+"2577
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2577:     struct {
+[s S101 :6 `uc 1 :1 `uc 1 ]
+[n S101 . . TX8_9 ]
+"2561
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2561: typedef union {
+[u S98 `S99 1 `S100 1 `S101 1 ]
+[n S98 . . . . ]
+"2582
+[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2582: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
+[v _TXSTAbits `VS98 ~T0 @X0 0 e@152 ]
+"70 Proyecto02.c
 [; ;Proyecto02.c: 70: void menu(void);
 [v _menu `(v ~T0 @X0 0 ef ]
 "465 D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
@@ -316,25 +335,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "793
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 793: extern volatile T2CONbits_t T2CONbits __attribute__((address(0x012)));
 [v _T2CONbits `VS26 ~T0 @X0 0 e@18 ]
-"2562
-[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2562:     struct {
-[s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S99 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"2572
-[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2572:     struct {
-[s S100 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
-[n S100 . TXD8 . nTX8 ]
-"2577
-[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2577:     struct {
-[s S101 :6 `uc 1 :1 `uc 1 ]
-[n S101 . . TX8_9 ]
-"2561
-[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2561: typedef union {
-[u S98 `S99 1 `S100 1 `S101 1 ]
-[n S98 . . . . ]
-"2582
-[; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2582: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
-[v _TXSTAbits `VS98 ~T0 @X0 0 e@152 ]
 "3341
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3341:     struct {
 [s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -693,17 +693,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;D:/Program File/MPLabX/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "39 Proyecto02.c
-[; ;Proyecto02.c: 39: int var;
-[v _var `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 39: char var;
+[v _var `uc ~T0 @X0 1 e ]
 "40
-[; ;Proyecto02.c: 40: int var1;
-[v _var1 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 40: char var1;
+[v _var1 `uc ~T0 @X0 1 e ]
 "41
-[; ;Proyecto02.c: 41: int var2;
-[v _var2 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 41: char var2;
+[v _var2 `uc ~T0 @X0 1 e ]
 "42
-[; ;Proyecto02.c: 42: int flag_uart;
-[v _flag_uart `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 42: char flag_uart;
+[v _flag_uart `uc ~T0 @X0 1 e ]
 "43
 [; ;Proyecto02.c: 43: char dato;
 [v _dato `uc ~T0 @X0 1 e ]
@@ -711,26 +711,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Proyecto02.c: 44: char direccion;
 [v _direccion `uc ~T0 @X0 1 e ]
 "45
-[; ;Proyecto02.c: 45: int lectura_01;
-[v _lectura_01 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 45: char lectura_01;
+[v _lectura_01 `uc ~T0 @X0 1 e ]
 "46
-[; ;Proyecto02.c: 46: int lectura_02;
-[v _lectura_02 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 46: char lectura_02;
+[v _lectura_02 `uc ~T0 @X0 1 e ]
 "47
-[; ;Proyecto02.c: 47: int lectura_03;
-[v _lectura_03 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 47: char lectura_03;
+[v _lectura_03 `uc ~T0 @X0 1 e ]
 "48
-[; ;Proyecto02.c: 48: int lectura_04;
-[v _lectura_04 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 48: char lectura_04;
+[v _lectura_04 `uc ~T0 @X0 1 e ]
 "49
-[; ;Proyecto02.c: 49: int lectura_05;
-[v _lectura_05 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 49: char lectura_05;
+[v _lectura_05 `uc ~T0 @X0 1 e ]
 "50
-[; ;Proyecto02.c: 50: int lec_pwm1;
-[v _lec_pwm1 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 50: char lec_pwm1;
+[v _lec_pwm1 `uc ~T0 @X0 1 e ]
 "51
-[; ;Proyecto02.c: 51: int lec_pwm2;
-[v _lec_pwm2 `i ~T0 @X0 1 e ]
+[; ;Proyecto02.c: 51: char lec_pwm2;
+[v _lec_pwm2 `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "75
 [; ;Proyecto02.c: 75: void __attribute__((picinterrupt(("")))) isr(void)
@@ -753,7 +753,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _CCPR2L -> + >> -> _ADRESH `i -> 1 `i -> 124 `i `uc ]
 "81
 [; ;Proyecto02.c: 81:              lec_pwm1 = ADRESH;
-[e = _lec_pwm1 -> _ADRESH `i ]
+[e = _lec_pwm1 -> _ADRESH `uc ]
 "83
 [; ;Proyecto02.c: 83:            }
 }
@@ -768,7 +768,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _CCPR1L -> + >> -> _ADRESH `i -> 1 `i -> 124 `i `uc ]
 "87
 [; ;Proyecto02.c: 87:             lec_pwm2 = ADRESH;
-[e = _lec_pwm2 -> _ADRESH `i ]
+[e = _lec_pwm2 -> _ADRESH `uc ]
 "88
 [; ;Proyecto02.c: 88:            }
 }
@@ -780,10 +780,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "91
 [; ;Proyecto02.c: 91:             var = ADRESH;
-[e = _var -> _ADRESH `i ]
+[e = _var -> _ADRESH `uc ]
 "93
 [; ;Proyecto02.c: 93:            if (var <= 85){
-[e $ ! <= _var -> 85 `i 146  ]
+[e $ ! <= -> _var `i -> 85 `i 146  ]
 {
 "94
 [; ;Proyecto02.c: 94:               dedo1_3();
@@ -794,7 +794,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 146 ]
 "97
 [; ;Proyecto02.c: 97:            if ((var <= 170)&&(var >= 86)){
-[e $ ! && <= _var -> 170 `i >= _var -> 86 `i 147  ]
+[e $ ! && <= -> _var `i -> 170 `i >= -> _var `i -> 86 `i 147  ]
 {
 "98
 [; ;Proyecto02.c: 98:                dedo1_2();
@@ -805,7 +805,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 147 ]
 "100
 [; ;Proyecto02.c: 100:             if (var >= 171){
-[e $ ! >= _var -> 171 `i 148  ]
+[e $ ! >= -> _var `i -> 171 `i 148  ]
 {
 "101
 [; ;Proyecto02.c: 101:                dedo1_1();
@@ -825,10 +825,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "105
 [; ;Proyecto02.c: 105:             var1 = ADRESH;
-[e = _var1 -> _ADRESH `i ]
+[e = _var1 -> _ADRESH `uc ]
 "107
 [; ;Proyecto02.c: 107:            if (var1 <= 85){
-[e $ ! <= _var1 -> 85 `i 151  ]
+[e $ ! <= -> _var1 `i -> 85 `i 151  ]
 {
 "108
 [; ;Proyecto02.c: 108:               dedo2_3();
@@ -839,7 +839,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 151 ]
 "111
 [; ;Proyecto02.c: 111:            if ((var1 <= 170)&&(var1 >= 86)){
-[e $ ! && <= _var1 -> 170 `i >= _var1 -> 86 `i 152  ]
+[e $ ! && <= -> _var1 `i -> 170 `i >= -> _var1 `i -> 86 `i 152  ]
 {
 "112
 [; ;Proyecto02.c: 112:                dedo2_2();
@@ -850,7 +850,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 152 ]
 "114
 [; ;Proyecto02.c: 114:             if (var1 >= 171){
-[e $ ! >= _var1 -> 171 `i 153  ]
+[e $ ! >= -> _var1 `i -> 171 `i 153  ]
 {
 "115
 [; ;Proyecto02.c: 115:                dedo2_1();
@@ -870,10 +870,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "119
 [; ;Proyecto02.c: 119:             var2 = ADRESH;
-[e = _var2 -> _ADRESH `i ]
+[e = _var2 -> _ADRESH `uc ]
 "121
 [; ;Proyecto02.c: 121:            if (var2 <= 85){
-[e $ ! <= _var2 -> 85 `i 156  ]
+[e $ ! <= -> _var2 `i -> 85 `i 156  ]
 {
 "122
 [; ;Proyecto02.c: 122:               dedo3_3();
@@ -884,7 +884,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 156 ]
 "124
 [; ;Proyecto02.c: 124:            if ((var2 <= 170)&&(var2 >= 86)){
-[e $ ! && <= _var2 -> 170 `i >= _var2 -> 86 `i 157  ]
+[e $ ! && <= -> _var2 `i -> 170 `i >= -> _var2 `i -> 86 `i 157  ]
 {
 "125
 [; ;Proyecto02.c: 125:                dedo3_2();
@@ -895,7 +895,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 157 ]
 "127
 [; ;Proyecto02.c: 127:             if (var2 >= 171){
-[e $ ! >= _var2 -> 171 `i 158  ]
+[e $ ! >= -> _var2 `i -> 171 `i 158  ]
 {
 "128
 [; ;Proyecto02.c: 128:                dedo3_1();
@@ -942,190 +942,196 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
 "143
 [; ;Proyecto02.c: 143:             lectura_01 = read_eeprom (0x17);
-[e = _lectura_01 -> ( _read_eeprom (1 -> -> 23 `i `uc `i ]
+[e = _lectura_01 ( _read_eeprom (1 -> -> 23 `i `uc ]
 "144
 [; ;Proyecto02.c: 144:             lectura_02 = read_eeprom (0x18);
-[e = _lectura_02 -> ( _read_eeprom (1 -> -> 24 `i `uc `i ]
+[e = _lectura_02 ( _read_eeprom (1 -> -> 24 `i `uc ]
 "145
 [; ;Proyecto02.c: 145:             lectura_03 = read_eeprom (0x19);
-[e = _lectura_03 -> ( _read_eeprom (1 -> -> 25 `i `uc `i ]
+[e = _lectura_03 ( _read_eeprom (1 -> -> 25 `i `uc ]
 "146
 [; ;Proyecto02.c: 146:             lectura_04 = read_eeprom (0x20);
-[e = _lectura_04 -> ( _read_eeprom (1 -> -> 32 `i `uc `i ]
+[e = _lectura_04 ( _read_eeprom (1 -> -> 32 `i `uc ]
 "147
 [; ;Proyecto02.c: 147:             lectura_05 = read_eeprom (0x21);
-[e = _lectura_05 -> ( _read_eeprom (1 -> -> 33 `i `uc `i ]
-"151
-[; ;Proyecto02.c: 151:             CCPR1L = (lectura_04>>1)+124;
-[e = _CCPR1L -> + >> _lectura_04 -> 1 `i -> 124 `i `uc ]
-"152
-[; ;Proyecto02.c: 152:             CCPR2L = (lectura_05>>1)+124;
-[e = _CCPR2L -> + >> _lectura_05 -> 1 `i -> 124 `i `uc ]
-"155
-[; ;Proyecto02.c: 155:             if (lectura_01 <= 85){
-[e $ ! <= _lectura_01 -> 85 `i 161  ]
+[e = _lectura_05 ( _read_eeprom (1 -> -> 33 `i `uc ]
+"149
+[; ;Proyecto02.c: 149:             CCPR1L = lectura_04;
+[e = _CCPR1L -> _lectura_04 `uc ]
+"150
+[; ;Proyecto02.c: 150:             CCPR2L = lectura_05 ;
+[e = _CCPR2L -> _lectura_05 `uc ]
+"153
+[; ;Proyecto02.c: 153:             if (lectura_01 <= 85){
+[e $ ! <= -> _lectura_01 `i -> 85 `i 161  ]
 {
-"156
-[; ;Proyecto02.c: 156:               dedo1_3();
+"154
+[; ;Proyecto02.c: 154:               dedo1_3();
 [e ( _dedo1_3 ..  ]
-"158
-[; ;Proyecto02.c: 158:                  }
+"156
+[; ;Proyecto02.c: 156:                  }
 }
 [e :U 161 ]
-"159
-[; ;Proyecto02.c: 159:            if ((lectura_01 <= 170)&&(lectura_01 >= 86)){
-[e $ ! && <= _lectura_01 -> 170 `i >= _lectura_01 -> 86 `i 162  ]
+"157
+[; ;Proyecto02.c: 157:            if ((lectura_01 <= 170)&&(lectura_01 >= 86)){
+[e $ ! && <= -> _lectura_01 `i -> 170 `i >= -> _lectura_01 `i -> 86 `i 162  ]
 {
-"160
-[; ;Proyecto02.c: 160:                dedo1_2();
+"158
+[; ;Proyecto02.c: 158:                dedo1_2();
 [e ( _dedo1_2 ..  ]
-"161
-[; ;Proyecto02.c: 161:                  }
+"159
+[; ;Proyecto02.c: 159:                  }
 }
 [e :U 162 ]
-"162
-[; ;Proyecto02.c: 162:             if (lectura_01 >= 171){
-[e $ ! >= _lectura_01 -> 171 `i 163  ]
+"160
+[; ;Proyecto02.c: 160:             if (lectura_01 >= 171){
+[e $ ! >= -> _lectura_01 `i -> 171 `i 163  ]
 {
-"163
-[; ;Proyecto02.c: 163:                dedo1_1();
+"161
+[; ;Proyecto02.c: 161:                dedo1_1();
 [e ( _dedo1_1 ..  ]
-"164
-[; ;Proyecto02.c: 164:                  }
+"162
+[; ;Proyecto02.c: 162:                  }
 }
 [e :U 163 ]
-"165
-[; ;Proyecto02.c: 165:             if (lectura_02 <= 85){
-[e $ ! <= _lectura_02 -> 85 `i 164  ]
+"163
+[; ;Proyecto02.c: 163:             if (lectura_02 <= 85){
+[e $ ! <= -> _lectura_02 `i -> 85 `i 164  ]
 {
-"166
-[; ;Proyecto02.c: 166:               dedo2_3();
+"164
+[; ;Proyecto02.c: 164:               dedo2_3();
 [e ( _dedo2_3 ..  ]
-"168
-[; ;Proyecto02.c: 168:                  }
+"166
+[; ;Proyecto02.c: 166:                  }
 }
 [e :U 164 ]
-"169
-[; ;Proyecto02.c: 169:            if ((lectura_02 <= 170)&&(lectura_02 >= 86)){
-[e $ ! && <= _lectura_02 -> 170 `i >= _lectura_02 -> 86 `i 165  ]
+"167
+[; ;Proyecto02.c: 167:            if ((lectura_02 <= 170)&&(lectura_02 >= 86)){
+[e $ ! && <= -> _lectura_02 `i -> 170 `i >= -> _lectura_02 `i -> 86 `i 165  ]
 {
-"170
-[; ;Proyecto02.c: 170:                dedo2_2();
+"168
+[; ;Proyecto02.c: 168:                dedo2_2();
 [e ( _dedo2_2 ..  ]
-"171
-[; ;Proyecto02.c: 171:                  }
+"169
+[; ;Proyecto02.c: 169:                  }
 }
 [e :U 165 ]
-"172
-[; ;Proyecto02.c: 172:             if (lectura_02 >= 171){
-[e $ ! >= _lectura_02 -> 171 `i 166  ]
+"170
+[; ;Proyecto02.c: 170:             if (lectura_02 >= 171){
+[e $ ! >= -> _lectura_02 `i -> 171 `i 166  ]
 {
-"173
-[; ;Proyecto02.c: 173:                dedo2_1();
+"171
+[; ;Proyecto02.c: 171:                dedo2_1();
 [e ( _dedo2_1 ..  ]
-"174
-[; ;Proyecto02.c: 174:                  }
+"172
+[; ;Proyecto02.c: 172:                  }
 }
 [e :U 166 ]
-"175
-[; ;Proyecto02.c: 175:             if (lectura_03 <= 85){
-[e $ ! <= _lectura_03 -> 85 `i 167  ]
+"173
+[; ;Proyecto02.c: 173:             if (lectura_03 <= 85){
+[e $ ! <= -> _lectura_03 `i -> 85 `i 167  ]
 {
-"176
-[; ;Proyecto02.c: 176:               dedo3_3();
+"174
+[; ;Proyecto02.c: 174:               dedo3_3();
 [e ( _dedo3_3 ..  ]
-"177
-[; ;Proyecto02.c: 177:                  }
+"175
+[; ;Proyecto02.c: 175:                  }
 }
 [e :U 167 ]
-"178
-[; ;Proyecto02.c: 178:            if ((lectura_03 <= 170)&&(lectura_03 >= 86)){
-[e $ ! && <= _lectura_03 -> 170 `i >= _lectura_03 -> 86 `i 168  ]
+"176
+[; ;Proyecto02.c: 176:            if ((lectura_03 <= 170)&&(lectura_03 >= 86)){
+[e $ ! && <= -> _lectura_03 `i -> 170 `i >= -> _lectura_03 `i -> 86 `i 168  ]
 {
-"179
-[; ;Proyecto02.c: 179:                dedo3_2();
+"177
+[; ;Proyecto02.c: 177:                dedo3_2();
 [e ( _dedo3_2 ..  ]
-"180
-[; ;Proyecto02.c: 180:                  }
+"178
+[; ;Proyecto02.c: 178:                  }
 }
 [e :U 168 ]
-"181
-[; ;Proyecto02.c: 181:             if (lectura_03 >= 171){
-[e $ ! >= _lectura_03 -> 171 `i 169  ]
+"179
+[; ;Proyecto02.c: 179:             if (lectura_03 >= 171){
+[e $ ! >= -> _lectura_03 `i -> 171 `i 169  ]
 {
-"182
-[; ;Proyecto02.c: 182:                dedo3_1();
+"180
+[; ;Proyecto02.c: 180:                dedo3_1();
 [e ( _dedo3_1 ..  ]
-"183
-[; ;Proyecto02.c: 183:                  }
+"181
+[; ;Proyecto02.c: 181:                  }
 }
 [e :U 169 ]
-"184
-[; ;Proyecto02.c: 184:             _delay((unsigned long)((3500)*(8000000/4000.0)));
+"182
+[; ;Proyecto02.c: 182:             _delay((unsigned long)((3500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"185
-[; ;Proyecto02.c: 185:             ADCON0bits.ADON = 1;
+"183
+[; ;Proyecto02.c: 183:             ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"186
-[; ;Proyecto02.c: 186:         }
+"184
+[; ;Proyecto02.c: 184:         }
 }
 [e $U 170  ]
-"187
-[; ;Proyecto02.c: 187:         else if (PORTBbits.RB0 == 0)
+"185
+[; ;Proyecto02.c: 185:         else if (PORTBbits.RB0 == 0)
 [e :U 160 ]
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 171  ]
-"188
-[; ;Proyecto02.c: 188:         {
+"186
+[; ;Proyecto02.c: 186:         {
 {
-"189
-[; ;Proyecto02.c: 189:             PORTBbits.RB6 = 1;
+"187
+[; ;Proyecto02.c: 187:             PORTBbits.RB6 = 1;
 [e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+"188
+[; ;Proyecto02.c: 188:             write_eeprom (var, 0x17);
+[e ( _write_eeprom (2 , _var -> -> 23 `i `uc ]
+"189
+[; ;Proyecto02.c: 189:             write_eeprom (var1, 0x18);
+[e ( _write_eeprom (2 , _var1 -> -> 24 `i `uc ]
 "190
-[; ;Proyecto02.c: 190:             write_eeprom (var, 0x17);
-[e ( _write_eeprom (2 , -> _var `uc -> -> 23 `i `uc ]
+[; ;Proyecto02.c: 190:             write_eeprom (var2, 0x19);
+[e ( _write_eeprom (2 , _var2 -> -> 25 `i `uc ]
 "191
-[; ;Proyecto02.c: 191:             write_eeprom (var1, 0x18);
-[e ( _write_eeprom (2 , -> _var1 `uc -> -> 24 `i `uc ]
+[; ;Proyecto02.c: 191:             write_eeprom (lec_pwm1, 0x20);
+[e ( _write_eeprom (2 , _lec_pwm1 -> -> 32 `i `uc ]
 "192
-[; ;Proyecto02.c: 192:             write_eeprom (var2, 0x19);
-[e ( _write_eeprom (2 , -> _var2 `uc -> -> 25 `i `uc ]
+[; ;Proyecto02.c: 192:             write_eeprom (lec_pwm2, 0x21);
+[e ( _write_eeprom (2 , _lec_pwm2 -> -> 33 `i `uc ]
 "193
-[; ;Proyecto02.c: 193:             write_eeprom (lec_pwm1, 0x20);
-[e ( _write_eeprom (2 , -> _lec_pwm1 `uc -> -> 32 `i `uc ]
-"194
-[; ;Proyecto02.c: 194:             write_eeprom (lec_pwm2, 0x21);
-[e ( _write_eeprom (2 , -> _lec_pwm2 `uc -> -> 33 `i `uc ]
-"195
-[; ;Proyecto02.c: 195:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[; ;Proyecto02.c: 193:             _delay((unsigned long)((500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"196
-[; ;Proyecto02.c: 196:         }
+"194
+[; ;Proyecto02.c: 194:         }
 }
 [e $U 172  ]
-"197
-[; ;Proyecto02.c: 197:         else if (PORTBbits.RB2 == 0){
+"195
+[; ;Proyecto02.c: 195:         else if (PORTBbits.RB2 == 0){
 [e :U 171 ]
 [e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 173  ]
 {
+"196
+[; ;Proyecto02.c: 196:             flag_uart = 1;
+[e = _flag_uart -> -> 1 `i `uc ]
 "198
-[; ;Proyecto02.c: 198:             flag_uart = 1;
-[e = _flag_uart -> 1 `i ]
-"200
-[; ;Proyecto02.c: 200:             while (flag_uart == 1){
+[; ;Proyecto02.c: 198:             while (flag_uart == 1){
 [e $U 174  ]
 [e :U 175 ]
 {
-"201
-[; ;Proyecto02.c: 201:                 menu();
+"199
+[; ;Proyecto02.c: 199:                 TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+"200
+[; ;Proyecto02.c: 200:                 menu();
 [e ( _menu ..  ]
-"202
-[; ;Proyecto02.c: 202:             }
+"201
+[; ;Proyecto02.c: 201:             }
 }
 [e :U 174 ]
-"200
-[; ;Proyecto02.c: 200:             while (flag_uart == 1){
-[e $ == _flag_uart -> 1 `i 175  ]
+"198
+[; ;Proyecto02.c: 198:             while (flag_uart == 1){
+[e $ == -> _flag_uart `i -> 1 `i 175  ]
 [e :U 176 ]
+"202
+[; ;Proyecto02.c: 202:             TXSTAbits.TXEN = 0;
+[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
 "203
 [; ;Proyecto02.c: 203:         }
 }
@@ -1392,8 +1398,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Proyecto02.c: 325:     RCSTAbits.CREN = 1;
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "327
-[; ;Proyecto02.c: 327:     TXSTAbits.TXEN = 1;
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;Proyecto02.c: 327:     TXSTAbits.TXEN = 0;
+[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
 "329
 [; ;Proyecto02.c: 329:     PIR1bits.RCIF = 0;
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
@@ -1491,608 +1497,537 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Proyecto02.c: 356: }
 [e :UE 186 ]
 }
-"359
-[; ;Proyecto02.c: 359: void dedo1_1(void){
+"358
+[; ;Proyecto02.c: 358: void dedo1_1(void){
 [v _dedo1_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_1 ]
 [f ]
-"360
-[; ;Proyecto02.c: 360:     PORTDbits.RD0 = 1;
+"359
+[; ;Proyecto02.c: 359:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"361
-[; ;Proyecto02.c: 361:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"360
+[; ;Proyecto02.c: 360:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"362
-[; ;Proyecto02.c: 362:     PORTDbits.RD0 = 0;
+"361
+[; ;Proyecto02.c: 361:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"363
-[; ;Proyecto02.c: 363:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"362
+[; ;Proyecto02.c: 362:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"364
-[; ;Proyecto02.c: 364:     }
+"363
+[; ;Proyecto02.c: 363:     }
 [e :UE 197 ]
 }
-"366
-[; ;Proyecto02.c: 366: void dedo1_2(void){
+"365
+[; ;Proyecto02.c: 365: void dedo1_2(void){
 [v _dedo1_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_2 ]
 [f ]
-"367
-[; ;Proyecto02.c: 367:     PORTDbits.RD0 = 1;
+"366
+[; ;Proyecto02.c: 366:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"368
-[; ;Proyecto02.c: 368:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"367
+[; ;Proyecto02.c: 367:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"369
-[; ;Proyecto02.c: 369:     PORTDbits.RD0 = 0;
+"368
+[; ;Proyecto02.c: 368:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"370
-[; ;Proyecto02.c: 370:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"369
+[; ;Proyecto02.c: 369:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"371
-[; ;Proyecto02.c: 371:     }
+"370
+[; ;Proyecto02.c: 370:     }
 [e :UE 198 ]
 }
-"373
-[; ;Proyecto02.c: 373: void dedo1_3(void){
+"372
+[; ;Proyecto02.c: 372: void dedo1_3(void){
 [v _dedo1_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo1_3 ]
 [f ]
-"374
-[; ;Proyecto02.c: 374:     PORTDbits.RD0 = 1;
+"373
+[; ;Proyecto02.c: 373:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"375
-[; ;Proyecto02.c: 375:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"374
+[; ;Proyecto02.c: 374:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"376
-[; ;Proyecto02.c: 376:     PORTDbits.RD0 = 0;
+"375
+[; ;Proyecto02.c: 375:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"377
-[; ;Proyecto02.c: 377:     _delay((unsigned long)((18)*(8000000/4000.0)));
+"376
+[; ;Proyecto02.c: 376:     _delay((unsigned long)((18)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 18 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"378
-[; ;Proyecto02.c: 378:     }
+"377
+[; ;Proyecto02.c: 377:     }
 [e :UE 199 ]
 }
-"380
-[; ;Proyecto02.c: 380: void dedo2_1(void){
+"379
+[; ;Proyecto02.c: 379: void dedo2_1(void){
 [v _dedo2_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_1 ]
 [f ]
-"381
-[; ;Proyecto02.c: 381:     PORTDbits.RD1 = 1;
+"380
+[; ;Proyecto02.c: 380:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"382
-[; ;Proyecto02.c: 382:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"381
+[; ;Proyecto02.c: 381:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"383
-[; ;Proyecto02.c: 383:     PORTDbits.RD1 = 0;
+"382
+[; ;Proyecto02.c: 382:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"384
-[; ;Proyecto02.c: 384:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"383
+[; ;Proyecto02.c: 383:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"385
-[; ;Proyecto02.c: 385:     }
+"384
+[; ;Proyecto02.c: 384:     }
 [e :UE 200 ]
 }
-"387
-[; ;Proyecto02.c: 387: void dedo2_2(void){
+"386
+[; ;Proyecto02.c: 386: void dedo2_2(void){
 [v _dedo2_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_2 ]
 [f ]
-"388
-[; ;Proyecto02.c: 388:     PORTDbits.RD1 = 1;
+"387
+[; ;Proyecto02.c: 387:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"389
-[; ;Proyecto02.c: 389:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"388
+[; ;Proyecto02.c: 388:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"390
-[; ;Proyecto02.c: 390:     PORTDbits.RD1 = 0;
+"389
+[; ;Proyecto02.c: 389:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"391
-[; ;Proyecto02.c: 391:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"390
+[; ;Proyecto02.c: 390:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"392
-[; ;Proyecto02.c: 392:     }
+"391
+[; ;Proyecto02.c: 391:     }
 [e :UE 201 ]
 }
-"394
-[; ;Proyecto02.c: 394: void dedo2_3(void){
+"393
+[; ;Proyecto02.c: 393: void dedo2_3(void){
 [v _dedo2_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo2_3 ]
 [f ]
-"395
-[; ;Proyecto02.c: 395:     PORTDbits.RD1 = 1;
+"394
+[; ;Proyecto02.c: 394:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"396
-[; ;Proyecto02.c: 396:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"395
+[; ;Proyecto02.c: 395:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"397
-[; ;Proyecto02.c: 397:     PORTDbits.RD1 = 0;
+"396
+[; ;Proyecto02.c: 396:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"398
-[; ;Proyecto02.c: 398:     _delay((unsigned long)((17)*(8000000/4000.0)));
+"397
+[; ;Proyecto02.c: 397:     _delay((unsigned long)((17)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 17 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"399
-[; ;Proyecto02.c: 399:     }
+"398
+[; ;Proyecto02.c: 398:     }
 [e :UE 202 ]
 }
-"401
-[; ;Proyecto02.c: 401: void dedo3_1(void){
+"400
+[; ;Proyecto02.c: 400: void dedo3_1(void){
 [v _dedo3_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_1 ]
 [f ]
-"402
-[; ;Proyecto02.c: 402:     PORTDbits.RD2 = 1;
+"401
+[; ;Proyecto02.c: 401:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"403
-[; ;Proyecto02.c: 403:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
+"402
+[; ;Proyecto02.c: 402:     _delay((unsigned long)((0.7)*(8000000/4000.0)));
 [e ( __delay (1 -> * .0.7 / -> -> 8000000 `l `d .4000.0 `ul ]
-"404
-[; ;Proyecto02.c: 404:     PORTDbits.RD2 = 0;
+"403
+[; ;Proyecto02.c: 403:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"405
-[; ;Proyecto02.c: 405:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
+"404
+[; ;Proyecto02.c: 404:     _delay((unsigned long)((19.3)*(8000000/4000.0)));
 [e ( __delay (1 -> * .19.3 / -> -> 8000000 `l `d .4000.0 `ul ]
-"406
-[; ;Proyecto02.c: 406:     }
+"405
+[; ;Proyecto02.c: 405:     }
 [e :UE 203 ]
 }
-"408
-[; ;Proyecto02.c: 408: void dedo3_2(void){
+"407
+[; ;Proyecto02.c: 407: void dedo3_2(void){
 [v _dedo3_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_2 ]
 [f ]
-"409
-[; ;Proyecto02.c: 409:     PORTDbits.RD2 = 1;
+"408
+[; ;Proyecto02.c: 408:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"410
-[; ;Proyecto02.c: 410:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
+"409
+[; ;Proyecto02.c: 409:     _delay((unsigned long)((1.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .1.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"411
-[; ;Proyecto02.c: 411:     PORTDbits.RD2 = 0;
+"410
+[; ;Proyecto02.c: 410:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"412
-[; ;Proyecto02.c: 412:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
+"411
+[; ;Proyecto02.c: 411:     _delay((unsigned long)((18.5)*(8000000/4000.0)));
 [e ( __delay (1 -> * .18.5 / -> -> 8000000 `l `d .4000.0 `ul ]
-"413
-[; ;Proyecto02.c: 413:     }
+"412
+[; ;Proyecto02.c: 412:     }
 [e :UE 204 ]
 }
-"415
-[; ;Proyecto02.c: 415: void dedo3_3(void){
+"414
+[; ;Proyecto02.c: 414: void dedo3_3(void){
 [v _dedo3_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _dedo3_3 ]
 [f ]
-"416
-[; ;Proyecto02.c: 416:     PORTDbits.RD2 = 1;
+"415
+[; ;Proyecto02.c: 415:     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"417
-[; ;Proyecto02.c: 417:     _delay((unsigned long)((2)*(8000000/4000.0)));
+"416
+[; ;Proyecto02.c: 416:     _delay((unsigned long)((2)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"418
-[; ;Proyecto02.c: 418:     PORTDbits.RD2 = 0;
+"417
+[; ;Proyecto02.c: 417:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"419
-[; ;Proyecto02.c: 419:     _delay((unsigned long)((17)*(8000000/4000.0)));
+"418
+[; ;Proyecto02.c: 418:     _delay((unsigned long)((17)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 17 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"420
-[; ;Proyecto02.c: 420:     }
+"419
+[; ;Proyecto02.c: 419:     }
 [e :UE 205 ]
 }
-"423
-[; ;Proyecto02.c: 423: void write_eeprom (char dato, char direccion){
+"421
+[; ;Proyecto02.c: 421: void write_eeprom (char dato, char direccion){
 [v _write_eeprom `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _write_eeprom ]
 [v _dato `uc ~T0 @X0 1 r1 ]
 [v _direccion `uc ~T0 @X0 1 r2 ]
 [f ]
-"424
-[; ;Proyecto02.c: 424:     EEADR = direccion;
+"422
+[; ;Proyecto02.c: 422:     EEADR = direccion;
 [e = _EEADR -> _direccion `uc ]
-"425
-[; ;Proyecto02.c: 425:     EEDAT = dato;
+"423
+[; ;Proyecto02.c: 423:     EEDAT = dato;
 [e = _EEDAT -> _dato `uc ]
-"428
-[; ;Proyecto02.c: 428:     INTCONbits.GIE = 0;
+"426
+[; ;Proyecto02.c: 426:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"430
-[; ;Proyecto02.c: 430:     EECON1bits.EEPGD = 0;
+"428
+[; ;Proyecto02.c: 428:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
-"431
-[; ;Proyecto02.c: 431:     EECON1bits.WREN = 1;
+"429
+[; ;Proyecto02.c: 429:     EECON1bits.WREN = 1;
 [e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
-"434
-[; ;Proyecto02.c: 434:     EECON2 = 0x55;
+"432
+[; ;Proyecto02.c: 432:     EECON2 = 0x55;
 [e = _EECON2 -> -> 85 `i `uc ]
-"435
-[; ;Proyecto02.c: 435:     EECON2 = 0xAA;
+"433
+[; ;Proyecto02.c: 433:     EECON2 = 0xAA;
 [e = _EECON2 -> -> 170 `i `uc ]
-"437
-[; ;Proyecto02.c: 437:     EECON1bits.WR = 1;
+"435
+[; ;Proyecto02.c: 435:     EECON1bits.WR = 1;
 [e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
-"439
-[; ;Proyecto02.c: 439:     while(PIR2bits.EEIF == 0);
+"437
+[; ;Proyecto02.c: 437:     while(PIR2bits.EEIF == 0);
 [e $U 207  ]
 [e :U 208 ]
 [e :U 207 ]
 [e $ == -> . . _PIR2bits 0 4 `i -> 0 `i 208  ]
 [e :U 209 ]
-"440
-[; ;Proyecto02.c: 440:     PIR2bits.EEIF = 0;
+"438
+[; ;Proyecto02.c: 438:     PIR2bits.EEIF = 0;
 [e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]
-"442
-[; ;Proyecto02.c: 442:     EECON1bits.WREN = 0;
+"440
+[; ;Proyecto02.c: 440:     EECON1bits.WREN = 0;
 [e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
-"443
-[; ;Proyecto02.c: 443: }
+"441
+[; ;Proyecto02.c: 441: }
 [e :UE 206 ]
 }
-"446
-[; ;Proyecto02.c: 446: char read_eeprom (char direccion){
+"443
+[; ;Proyecto02.c: 443: char read_eeprom (char direccion){
 [v _read_eeprom `(uc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _read_eeprom ]
 [v _direccion `uc ~T0 @X0 1 r1 ]
 [f ]
-"447
-[; ;Proyecto02.c: 447:     EEADR = direccion;
+"444
+[; ;Proyecto02.c: 444:     EEADR = direccion;
 [e = _EEADR -> _direccion `uc ]
-"448
-[; ;Proyecto02.c: 448:     EECON1bits.EEPGD = 0;
+"445
+[; ;Proyecto02.c: 445:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
-"449
-[; ;Proyecto02.c: 449:     EECON1bits.RD = 1;
+"446
+[; ;Proyecto02.c: 446:     EECON1bits.RD = 1;
 [e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
-"450
-[; ;Proyecto02.c: 450:     char dato = EEDATA;
+"447
+[; ;Proyecto02.c: 447:     char dato = EEDATA;
 [v _dato `uc ~T0 @X0 1 a ]
 [e = _dato -> _EEDATA `uc ]
-"451
-[; ;Proyecto02.c: 451:     return dato;
+"448
+[; ;Proyecto02.c: 448:     return dato;
 [e ) _dato ]
 [e $UE 210  ]
-"452
-[; ;Proyecto02.c: 452: }
+"449
+[; ;Proyecto02.c: 449: }
 [e :UE 210 ]
 }
-"455
-[; ;Proyecto02.c: 455: void putch(char data){
+"452
+[; ;Proyecto02.c: 452: void putch(char data){
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _putch ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"456
-[; ;Proyecto02.c: 456:     while(TXIF == 0);
+"453
+[; ;Proyecto02.c: 453:     while(TXIF == 0);
 [e $U 212  ]
 [e :U 213 ]
 [e :U 212 ]
 [e $ == -> _TXIF `i -> 0 `i 213  ]
 [e :U 214 ]
-"457
-[; ;Proyecto02.c: 457:     TXREG = data;
+"454
+[; ;Proyecto02.c: 454:     TXREG = data;
 [e = _TXREG -> _data `uc ]
-"458
-[; ;Proyecto02.c: 458:     return;
+"455
+[; ;Proyecto02.c: 455:     return;
 [e $UE 211  ]
-"459
-[; ;Proyecto02.c: 459: }
+"456
+[; ;Proyecto02.c: 456: }
 [e :UE 211 ]
 }
-"462
-[; ;Proyecto02.c: 462: void menu(void){
+"459
+[; ;Proyecto02.c: 459: void menu(void){
 [v _menu `(v ~T0 @X0 1 ef ]
 {
 [e :U _menu ]
 [f ]
-"463
-[; ;Proyecto02.c: 463:     _delay((unsigned long)((250)*(8000000/4000.0)));
+"460
+[; ;Proyecto02.c: 460:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"464
-[; ;Proyecto02.c: 464:     printf("\r -----------Bienvenido----------- \r");
+"461
+[; ;Proyecto02.c: 461:     printf("\r -----------Bienvenido----------- \r");
 [e ( _printf :s 1C ]
-"465
-[; ;Proyecto02.c: 465:     _delay((unsigned long)((250)*(8000000/4000.0)));
+"462
+[; ;Proyecto02.c: 462:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"466
-[; ;Proyecto02.c: 466:     printf("\r Eliga una de las siguientes opciones: \r");
+"463
+[; ;Proyecto02.c: 463:     printf("\r Elija una de las siguientes opciones: \r");
 [e ( _printf :s 2C ]
-"467
-[; ;Proyecto02.c: 467:     _delay((unsigned long)((250)*(8000000/4000.0)));
+"464
+[; ;Proyecto02.c: 464:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"468
-[; ;Proyecto02.c: 468:     printf(" 1. Mover motores individuales \r");
+"465
+[; ;Proyecto02.c: 465:     printf(" 1. Mover motores individuales \r");
 [e ( _printf :s 3C ]
-"469
-[; ;Proyecto02.c: 469:     _delay((unsigned long)((250)*(8000000/4000.0)));
+"466
+[; ;Proyecto02.c: 466:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"470
-[; ;Proyecto02.c: 470:     printf(" 2. Elegir una rutina \r");
+"467
+[; ;Proyecto02.c: 467:     printf(" 2. Salir de la terminal \r");
 [e ( _printf :s 4C ]
-"471
-[; ;Proyecto02.c: 471:     _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"472
-[; ;Proyecto02.c: 472:     printf(" 3. Salir de la terminal \r");
-[e ( _printf :s 5C ]
-"474
-[; ;Proyecto02.c: 474:     while (RCIF == 0);
+"469
+[; ;Proyecto02.c: 469:     while (RCIF == 0);
 [e $U 216  ]
 [e :U 217 ]
 [e :U 216 ]
 [e $ == -> _RCIF `i -> 0 `i 217  ]
 [e :U 218 ]
-"476
-[; ;Proyecto02.c: 476:     if (RCREG == '1'){
+"471
+[; ;Proyecto02.c: 471:     if (RCREG == '1'){
 [e $ ! == -> _RCREG `ui -> 49 `ui 219  ]
 {
-"477
-[; ;Proyecto02.c: 477:         _delay((unsigned long)((500)*(8000000/4000.0)));
+"472
+[; ;Proyecto02.c: 472:         _delay((unsigned long)((500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"478
-[; ;Proyecto02.c: 478:         printf("\r Que motor desea mover? \r");
-[e ( _printf :s 6C ]
-"479
-[; ;Proyecto02.c: 479:         _delay((unsigned long)((250)*(8000000/4000.0)));
+"473
+[; ;Proyecto02.c: 473:         printf("\r Que motor desea mover? \r");
+[e ( _printf :s 5C ]
+"474
+[; ;Proyecto02.c: 474:         _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"480
-[; ;Proyecto02.c: 480:         printf(" a. Mover motor 1 \r");
+"475
+[; ;Proyecto02.c: 475:         printf(" a. Mover motor 1 \r");
+[e ( _printf :s 6C ]
+"476
+[; ;Proyecto02.c: 476:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"477
+[; ;Proyecto02.c: 477:         printf(" b. Mover motor 2 \r");
 [e ( _printf :s 7C ]
-"481
-[; ;Proyecto02.c: 481:         _delay((unsigned long)((250)*(8000000/4000.0)));
+"478
+[; ;Proyecto02.c: 478:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"479
+[; ;Proyecto02.c: 479:         printf(" c. Mover motor 3 \r");
+[e ( _printf :s 8C ]
+"480
+[; ;Proyecto02.c: 480:         _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "482
-[; ;Proyecto02.c: 482:         printf(" b. Mover motor 2 \r");
-[e ( _printf :s 8C ]
-"483
-[; ;Proyecto02.c: 483:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"484
-[; ;Proyecto02.c: 484:         printf(" c. Mover motor 3 \r");
-[e ( _printf :s 9C ]
-"485
-[; ;Proyecto02.c: 485:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"486
-[; ;Proyecto02.c: 486:         printf(" d. Mover motor 4 \r");
-[e ( _printf :s 10C ]
-"487
-[; ;Proyecto02.c: 487:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"488
-[; ;Proyecto02.c: 488:         printf(" e. Mover motor 5 \r");
-[e ( _printf :s 11C ]
-"489
-[; ;Proyecto02.c: 489:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"491
-[; ;Proyecto02.c: 491:         while (RCIF == 0);
+[; ;Proyecto02.c: 482:         while (RCIF == 0);
 [e $U 220  ]
 [e :U 221 ]
 [e :U 220 ]
 [e $ == -> _RCIF `i -> 0 `i 221  ]
 [e :U 222 ]
-"493
-[; ;Proyecto02.c: 493:         if (RCREG == 'a'){
+"484
+[; ;Proyecto02.c: 484:         if (RCREG == 'a'){
 [e $ ! == -> _RCREG `ui -> 97 `ui 223  ]
 {
-"494
-[; ;Proyecto02.c: 494:             dedo1_1();
+"485
+[; ;Proyecto02.c: 485:             dedo1_1();
 [e ( _dedo1_1 ..  ]
-"495
-[; ;Proyecto02.c: 495:             _delay((unsigned long)((2500)*(8000000/4000.0)));
+"486
+[; ;Proyecto02.c: 486:             _delay((unsigned long)((2500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"496
-[; ;Proyecto02.c: 496:             dedo1_3();
+"487
+[; ;Proyecto02.c: 487:             dedo1_3();
 [e ( _dedo1_3 ..  ]
-"497
-[; ;Proyecto02.c: 497:         }
+"488
+[; ;Proyecto02.c: 488:         }
 }
 [e :U 223 ]
-"498
-[; ;Proyecto02.c: 498:         if (RCREG == 'b'){
+"489
+[; ;Proyecto02.c: 489:         if (RCREG == 'b'){
 [e $ ! == -> _RCREG `ui -> 98 `ui 224  ]
 {
-"499
-[; ;Proyecto02.c: 499:             dedo1_1();
-[e ( _dedo1_1 ..  ]
-"500
-[; ;Proyecto02.c: 500:             _delay((unsigned long)((2500)*(8000000/4000.0)));
+"490
+[; ;Proyecto02.c: 490:             dedo2_1();
+[e ( _dedo2_1 ..  ]
+"491
+[; ;Proyecto02.c: 491:             _delay((unsigned long)((2500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"501
-[; ;Proyecto02.c: 501:             dedo1_3();
-[e ( _dedo1_3 ..  ]
-"502
-[; ;Proyecto02.c: 502:         }
+"492
+[; ;Proyecto02.c: 492:             dedo2_3();
+[e ( _dedo2_3 ..  ]
+"493
+[; ;Proyecto02.c: 493:         }
 }
 [e :U 224 ]
-"503
-[; ;Proyecto02.c: 503:         if (RCREG == 'c'){
+"494
+[; ;Proyecto02.c: 494:         if (RCREG == 'c'){
 [e $ ! == -> _RCREG `ui -> 99 `ui 225  ]
 {
-"504
-[; ;Proyecto02.c: 504:             dedo1_1();
-[e ( _dedo1_1 ..  ]
-"505
-[; ;Proyecto02.c: 505:             _delay((unsigned long)((2500)*(8000000/4000.0)));
+"495
+[; ;Proyecto02.c: 495:             dedo3_1();
+[e ( _dedo3_1 ..  ]
+"496
+[; ;Proyecto02.c: 496:             _delay((unsigned long)((2500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"506
-[; ;Proyecto02.c: 506:             dedo1_3();
-[e ( _dedo1_3 ..  ]
-"507
-[; ;Proyecto02.c: 507:         }
+"497
+[; ;Proyecto02.c: 497:             dedo3_3();
+[e ( _dedo3_3 ..  ]
+"498
+[; ;Proyecto02.c: 498:         }
 }
+[e $U 226  ]
+"499
+[; ;Proyecto02.c: 499:         else{
 [e :U 225 ]
-"508
-[; ;Proyecto02.c: 508:         if (RCREG == 'd'){
-[e $ ! == -> _RCREG `ui -> 100 `ui 226  ]
 {
-"509
-[; ;Proyecto02.c: 509:             dedo1_1();
-[e ( _dedo1_1 ..  ]
-"510
-[; ;Proyecto02.c: 510:             _delay((unsigned long)((2500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"511
-[; ;Proyecto02.c: 511:             dedo1_3();
-[e ( _dedo1_3 ..  ]
-"512
-[; ;Proyecto02.c: 512:         }
+"500
+[; ;Proyecto02.c: 500:             (0);
+[e -> 0 `i ]
+"501
+[; ;Proyecto02.c: 501:         }
 }
 [e :U 226 ]
-"513
-[; ;Proyecto02.c: 513:         if (RCREG == 'e'){
-[e $ ! == -> _RCREG `ui -> 101 `ui 227  ]
-{
-"514
-[; ;Proyecto02.c: 514:             dedo1_1();
-[e ( _dedo1_1 ..  ]
-"515
-[; ;Proyecto02.c: 515:             _delay((unsigned long)((2500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"516
-[; ;Proyecto02.c: 516:             dedo1_3();
-[e ( _dedo1_3 ..  ]
-"517
-[; ;Proyecto02.c: 517:         }
-}
-[e $U 228  ]
-"518
-[; ;Proyecto02.c: 518:         else{
-[e :U 227 ]
-{
-"519
-[; ;Proyecto02.c: 519:             (0);
-[e -> 0 `i ]
-"520
-[; ;Proyecto02.c: 520:         }
-}
-[e :U 228 ]
-"521
-[; ;Proyecto02.c: 521:     }
+"502
+[; ;Proyecto02.c: 502:     }
 }
 [e :U 219 ]
-"522
-[; ;Proyecto02.c: 522:     if (RCREG == '2'){
-[e $ ! == -> _RCREG `ui -> 50 `ui 229  ]
+"503
+[; ;Proyecto02.c: 503:     if (RCREG == '2'){
+[e $ ! == -> _RCREG `ui -> 50 `ui 227  ]
 {
-"523
-[; ;Proyecto02.c: 523:         printf("\r a. Conteo de 1 a 5: \r");
-[e ( _printf :s 12C ]
-"524
-[; ;Proyecto02.c: 524:     }
-}
+"504
+[; ;Proyecto02.c: 504:         printf("\r Esta seguro? \r");
+[e ( _printf :s 9C ]
+"505
+[; ;Proyecto02.c: 505:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"506
+[; ;Proyecto02.c: 506:         printf(" d. Si \r");
+[e ( _printf :s 10C ]
+"507
+[; ;Proyecto02.c: 507:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"508
+[; ;Proyecto02.c: 508:         printf(" e. No \r");
+[e ( _printf :s 11C ]
+"509
+[; ;Proyecto02.c: 509:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"511
+[; ;Proyecto02.c: 511:         while (RCIF == 0);
+[e $U 228  ]
 [e :U 229 ]
-"525
-[; ;Proyecto02.c: 525:     if (RCREG == '3'){
-[e $ ! == -> _RCREG `ui -> 51 `ui 230  ]
-{
-"526
-[; ;Proyecto02.c: 526:         printf("\r ¿Esta seguro? \r");
-[e ( _printf :s 13C ]
-"527
-[; ;Proyecto02.c: 527:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"528
-[; ;Proyecto02.c: 528:         printf(" a. Si \r");
-[e ( _printf :s 14C ]
-"529
-[; ;Proyecto02.c: 529:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"530
-[; ;Proyecto02.c: 530:         printf(" b. No \r");
-[e ( _printf :s 15C ]
-"531
-[; ;Proyecto02.c: 531:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"533
-[; ;Proyecto02.c: 533:         while (RCIF == 0);
-[e $U 231  ]
-[e :U 232 ]
-[e :U 231 ]
-[e $ == -> _RCIF `i -> 0 `i 232  ]
-[e :U 233 ]
-"534
-[; ;Proyecto02.c: 534:         if (RCREG == 'a'){
-[e $ ! == -> _RCREG `ui -> 97 `ui 234  ]
-{
-"535
-[; ;Proyecto02.c: 535:             flag_uart = 0;
-[e = _flag_uart -> 0 `i ]
-"536
-[; ;Proyecto02.c: 536:         }
-}
-[e $U 235  ]
-"537
-[; ;Proyecto02.c: 537:         else if (RCREG == 'b'){
-[e :U 234 ]
-[e $ ! == -> _RCREG `ui -> 98 `ui 236  ]
-{
-"538
-[; ;Proyecto02.c: 538:             return;
-[e $UE 215  ]
-"539
-[; ;Proyecto02.c: 539:         }
-}
-[e $U 237  ]
-"540
-[; ;Proyecto02.c: 540:         else{
-[e :U 236 ]
-{
-"541
-[; ;Proyecto02.c: 541:             (0);
-[e -> 0 `i ]
-"542
-[; ;Proyecto02.c: 542:         }
-}
-[e :U 237 ]
-[e :U 235 ]
-"543
-[; ;Proyecto02.c: 543:     }
-}
-[e $U 238  ]
-"544
-[; ;Proyecto02.c: 544:     else{
+[e :U 228 ]
+[e $ == -> _RCIF `i -> 0 `i 229  ]
 [e :U 230 ]
+"512
+[; ;Proyecto02.c: 512:         if (RCREG == 'd'){
+[e $ ! == -> _RCREG `ui -> 100 `ui 231  ]
 {
-"545
-[; ;Proyecto02.c: 545:         (0);
-[e -> 0 `i ]
-"546
-[; ;Proyecto02.c: 546:     }
+"513
+[; ;Proyecto02.c: 513:             flag_uart = 0;
+[e = _flag_uart -> -> 0 `i `uc ]
+"515
+[; ;Proyecto02.c: 515:             printf(" Gracias por todo \r");
+[e ( _printf :s 12C ]
+"516
+[; ;Proyecto02.c: 516:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"518
+[; ;Proyecto02.c: 518:         }
 }
-[e :U 238 ]
-"547
-[; ;Proyecto02.c: 547:     return;
+[e $U 232  ]
+"519
+[; ;Proyecto02.c: 519:         else if (RCREG == 'e'){
+[e :U 231 ]
+[e $ ! == -> _RCREG `ui -> 101 `ui 233  ]
+{
+"520
+[; ;Proyecto02.c: 520:             (0);
+[e -> 0 `i ]
+"521
+[; ;Proyecto02.c: 521:         }
+}
+[e :U 233 ]
+[e :U 232 ]
+"522
+[; ;Proyecto02.c: 522:     }
+}
+[e $U 234  ]
+"523
+[; ;Proyecto02.c: 523:     else{
+[e :U 227 ]
+{
+"524
+[; ;Proyecto02.c: 524:         (0);
+[e -> 0 `i ]
+"525
+[; ;Proyecto02.c: 525:     }
+}
+[e :U 234 ]
+"526
+[; ;Proyecto02.c: 526:     return;
 [e $UE 215  ]
-"548
-[; ;Proyecto02.c: 548: }
+"527
+[; ;Proyecto02.c: 527: }
 [e :UE 215 ]
 }
 [p f _printf 8388608 ]
 [a 3C 32 49 46 32 77 111 118 101 114 32 109 111 116 111 114 101 115 32 105 110 100 105 118 105 100 117 97 108 101 115 32 13 0 ]
-[a 15C 32 98 46 32 78 111 32 13 0 ]
-[a 5C 32 51 46 32 83 97 108 105 114 32 100 101 32 108 97 32 116 101 114 109 105 110 97 108 32 13 0 ]
-[a 14C 32 97 46 32 83 105 32 13 0 ]
-[a 4C 32 50 46 32 69 108 101 103 105 114 32 117 110 97 32 114 117 116 105 110 97 32 13 0 ]
-[a 6C 13 32 81 117 101 32 109 111 116 111 114 32 100 101 115 101 97 32 109 111 118 101 114 63 32 13 0 ]
-[a 13C 13 32 18446744073709551554 18446744073709551551 69 115 116 97 32 115 101 103 117 114 111 63 32 13 0 ]
-[a 2C 13 32 69 108 105 103 97 32 117 110 97 32 100 101 32 108 97 115 32 115 105 103 117 105 101 110 116 101 115 32 111 112 99 105 111 110 101 115 58 32 13 0 ]
-[a 12C 13 32 97 46 32 67 111 110 116 101 111 32 100 101 32 49 32 97 32 53 58 32 13 0 ]
-[a 11C 32 101 46 32 77 111 118 101 114 32 109 111 116 111 114 32 53 32 13 0 ]
-[a 10C 32 100 46 32 77 111 118 101 114 32 109 111 116 111 114 32 52 32 13 0 ]
-[a 9C 32 99 46 32 77 111 118 101 114 32 109 111 116 111 114 32 51 32 13 0 ]
-[a 8C 32 98 46 32 77 111 118 101 114 32 109 111 116 111 114 32 50 32 13 0 ]
-[a 7C 32 97 46 32 77 111 118 101 114 32 109 111 116 111 114 32 49 32 13 0 ]
+[a 12C 32 71 114 97 99 105 97 115 32 112 111 114 32 116 111 100 111 32 13 0 ]
+[a 11C 32 101 46 32 78 111 32 13 0 ]
+[a 4C 32 50 46 32 83 97 108 105 114 32 100 101 32 108 97 32 116 101 114 109 105 110 97 108 32 13 0 ]
+[a 10C 32 100 46 32 83 105 32 13 0 ]
+[a 5C 13 32 81 117 101 32 109 111 116 111 114 32 100 101 115 101 97 32 109 111 118 101 114 63 32 13 0 ]
+[a 9C 13 32 69 115 116 97 32 115 101 103 117 114 111 63 32 13 0 ]
+[a 2C 13 32 69 108 105 106 97 32 117 110 97 32 100 101 32 108 97 115 32 115 105 103 117 105 101 110 116 101 115 32 111 112 99 105 111 110 101 115 58 32 13 0 ]
+[a 8C 32 99 46 32 77 111 118 101 114 32 109 111 116 111 114 32 51 32 13 0 ]
+[a 7C 32 98 46 32 77 111 118 101 114 32 109 111 116 111 114 32 50 32 13 0 ]
+[a 6C 32 97 46 32 77 111 118 101 114 32 109 111 116 111 114 32 49 32 13 0 ]
 [a 1C 13 32 45 45 45 45 45 45 45 45 45 45 45 66 105 101 110 118 101 110 105 100 111 45 45 45 45 45 45 45 45 45 45 45 32 13 0 ]
