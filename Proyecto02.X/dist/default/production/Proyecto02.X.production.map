@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Proyecto02.X.production.sym \
   --cmf=dist/default/production\Proyecto02.X.production.cmf -z -Q16F887 \
-  -oC:\Users\marco\AppData\Local\Temp\sg98.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\marco\AppData\Local\Temp\s8cc.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Proyecto02.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\marco\AppData\Local\Temp\sg98.o \
+  -pfunctab=ENTRY -k C:\Users\marco\AppData\Local\Temp\s8cc.o \
   dist/default/production\Proyecto02.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\marco\AppData\Local\Temp\sg98.o
+C:\Users\marco\AppData\Local\Temp\s8cc.o
                 end_init                             12       12        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -36,30 +36,30 @@ dist/default/production\Proyecto02.X.production.o
                 cinit                                15       15       13        8       0
                 intentry                              4        4        E        8       0
                 config                             2007     2007        2        0       4
-                text17                              6F4      6F4       19      A32       0
-                text16                              6DB      6DB       19      A32       0
-                text15                              6C2      6C2       19      A32       0
-                text14                              6A9      6A9       19      A32       0
-                text13                              690      690       19      A32       0
-                text12                              677      677       19      A32       0
-                text11                              65E      65E       19      A32       0
-                text10                              645      645       19      A32       0
-                text9                               62C      62C       19      A32       0
-                text8                               72C      72C        A      A32       0
-                text7                               5EA      5EA       26      A32       0
-                text6                               252      252      19A        8       0
-                text5                               70D      70D       11      A32       0
-                text4                               610      610       1C      A32       0
+                text17                              432      432       19        8       0
+                text16                              419      419       19        8       0
+                text15                              7D6      7D6       19      C5A       0
+                text14                              7BD      7BD       19      C5A       0
+                text13                              7A4      7A4       19      C5A       0
+                text12                              78B      78B       19      C5A       0
+                text11                              772      772       19      C5A       0
+                text10                              759      759       19      C5A       0
+                text9                               740      740       19      C5A       0
+                text8                               46B      46B        A      8BA       0
+                text7                               6FE      6FE       26      C5A       0
+                text6                               252      252      1C7        8       0
+                text5                               7EF      7EF       11      C5A       0
+                text4                               724      724       1C      C5A       0
                 text3                                28       28      22A        8       0
-                text2                               595      595       55      A32       0
-                text1                               519      519       7C      A32       0
-                maintext                            71E      71E        E      A32       0
+                text2                               6A9      6A9       55      C5A       0
+                text1                               62D      62D       7C      C5A       0
+                maintext                            45D      45D        E      8BA       0
                 cstackBANK0                          2A       2A        8       20       1
                 cstackCOMMON                         70       70        B       70       1
                 bssBANK0                             20       20        A       20       1
                 bssCOMMON                            7B       7B        3       70       1
-                stringtext                          400      400      119        8       0
-                strings                             3EC      3EC       12      7D8       0
+                stringtext                          500      500      12D        A       0
+                strings                             44B      44B       12      896       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -69,30 +69,30 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                15       15       13         0
                 intentry                              4        4        E         0
                 reset_vec                             0        0        3         0
-                text17                              6F4      6F4       19         0
-                text16                              6DB      6DB       19         0
-                text15                              6C2      6C2       19         0
-                text14                              6A9      6A9       19         0
-                text13                              690      690       19         0
-                text12                              677      677       19         0
-                text11                              65E      65E       19         0
-                text10                              645      645       19         0
-                text9                               62C      62C       19         0
-                text8                               72C      72C        A         0
-                text7                               5EA      5EA       26         0
-                text6                               252      252      19A         0
-                text5                               70D      70D       11         0
-                text4                               610      610       1C         0
+                text17                              432      432       19         0
+                text16                              419      419       19         0
+                text15                              7D6      7D6       19         0
+                text14                              7BD      7BD       19         0
+                text13                              7A4      7A4       19         0
+                text12                              78B      78B       19         0
+                text11                              772      772       19         0
+                text10                              759      759       19         0
+                text9                               740      740       19         0
+                text8                               46B      46B        A         0
+                text7                               6FE      6FE       26         0
+                text6                               252      252      1C7         0
+                text5                               7EF      7EF       11         0
+                text4                               724      724       1C         0
                 text3                                28       28      22A         0
-                text2                               595      595       55         0
-                text1                               519      519       7C         0
-                maintext                            71E      71E        E         0
+                text2                               6A9      6A9       55         0
+                text1                               62D      62D       7C         0
+                maintext                            45D      45D        E         0
 
         CLASS   STRCODE        
-                stringtext                          400      400      119         0
+                stringtext                          500      500      12D         0
 
         CLASS   STRING         
-                strings                             3EC      3EC       12         0
+                strings                             44B      44B       12         0
 
         CLASS   CONST          
 
@@ -137,12 +137,13 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  0003E8  0003EC         8       0  CODE        2
+                intentry                       000004  000447  00044B         8       0  CODE        2
                 bssBANK0                       000020  000012  000032        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                strings                        0003EC  000012  0003FE       7D8       0  STRING      2
-                stringtext                     000400  000119  000519         8       0  STRCODE     2
-                text1                          000519  00021D  000736       A32       0  CODE        2
+                strings                        00044B  000012  00045D       896       0  STRING      2
+                maintext                       00045D  000018  000475       8BA       0  CODE        2
+                stringtext                     000500  00012D  00062D         A       0  STRCODE     2
+                text1                          00062D  0001D3  000800       C5A       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -153,15 +154,15 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         03FE-03FF              2
-                         0736-1FFF            800
+                         0475-04FF             8B
+                         0800-1FFF            800
         CONST            0003-0003              1           2
-                         03FE-03FF              2
-                         0736-1FFF            100
+                         0475-04FF             8B
+                         0800-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         03FE-03FF              2
-                         0736-1FFF            100
+                         0475-04FF             8B
+                         0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0032-006F             3E           1
                          00A0-00EF             50
@@ -173,11 +174,11 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         03FE-03FF              2
-                         0736-1FFF           18CA
+                         0475-04FF             8B
+                         0800-1FFF           1800
         STRING           0003-0003              1           2
-                         03FE-03FF              2
-                         0736-1FFF            100
+                         0475-04FF             8B
+                         0800-1FFF            100
 
                                   Symbol Table
 
@@ -253,7 +254,7 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        0736
+__Hspace_0               (abs)        0800
 __Hspace_1               (abs)        007E
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -298,7 +299,7 @@ __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Lstringtext            stringtext   0000
 __Ltext                  text         0000
-__S0                     (abs)        0736
+__S0                     (abs)        0800
 __S1                     (abs)        007E
 __S2                     (abs)        0000
 __S3                     (abs)        0000
@@ -308,51 +309,51 @@ ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
 __end_of__initialization cinit        0024
-__end_of__stringtab      strings      03FE
-__end_of_chanel          text2        05EA
-__end_of_dedo1_1         text14       06C2
-__end_of_dedo1_2         text17       070D
-__end_of_dedo1_3         text13       06A9
-__end_of_dedo2_1         text12       0690
-__end_of_dedo2_2         text16       06F4
-__end_of_dedo2_3         text11       0677
-__end_of_dedo3_1         text10       065E
-__end_of_dedo3_2         text15       06DB
-__end_of_dedo3_3         text9        0645
+__end_of__stringtab      strings      045D
+__end_of_chanel          text2        06FE
+__end_of_dedo1_1         text14       07D6
+__end_of_dedo1_2         text13       07BD
+__end_of_dedo1_3         text17       044B
+__end_of_dedo2_1         text12       07A4
+__end_of_dedo2_2         text11       078B
+__end_of_dedo2_3         text16       0432
+__end_of_dedo3_1         text10       0772
+__end_of_dedo3_2         text9        0759
+__end_of_dedo3_3         text15       07EF
 __end_of_isr             text3        0252
-__end_of_main            maintext     072C
-__end_of_menu            text6        03EC
-__end_of_printf          text7        0610
-__end_of_putch           text8        0736
-__end_of_read_eeprom     text5        071E
-__end_of_setup           text1        0595
-__end_of_write_eeprom    text4        062C
+__end_of_main            maintext     046B
+__end_of_menu            text6        0419
+__end_of_printf          text7        0724
+__end_of_putch           text8        0475
+__end_of_read_eeprom     text5        0800
+__end_of_setup           text1        06A9
+__end_of_write_eeprom    text4        0740
 __initialization         cinit        0015
 __pbssBANK0              bssBANK0     0020
 __pbssCOMMON             bssCOMMON    007B
 __pcstackBANK0           cstackBANK0  002A
 __pcstackCOMMON          cstackCOMMON 0070
 __pintentry              intentry     0004
-__pmaintext              maintext     071E
-__pstrings               strings      03EC
-__pstringtext            stringtext   0400
-__ptext1                 text1        0519
-__ptext10                text10       0645
-__ptext11                text11       065E
-__ptext12                text12       0677
-__ptext13                text13       0690
-__ptext14                text14       06A9
-__ptext15                text15       06C2
-__ptext16                text16       06DB
-__ptext17                text17       06F4
-__ptext2                 text2        0595
+__pmaintext              maintext     045D
+__pstrings               strings      044B
+__pstringtext            stringtext   0500
+__ptext1                 text1        062D
+__ptext10                text10       0759
+__ptext11                text11       0772
+__ptext12                text12       078B
+__ptext13                text13       07A4
+__ptext14                text14       07BD
+__ptext15                text15       07D6
+__ptext16                text16       0419
+__ptext17                text17       0432
+__ptext2                 text2        06A9
 __ptext3                 text3        0028
-__ptext4                 text4        0610
-__ptext5                 text5        070D
+__ptext4                 text4        0724
+__ptext5                 text5        07EF
 __ptext6                 text6        0252
-__ptext7                 text7        05EA
-__ptext8                 text8        072C
-__ptext9                 text9        062C
+__ptext7                 text7        06FE
+__ptext8                 text8        046B
+__ptext9                 text9        0740
 __size_of_chanel         (abs)        0000
 __size_of_dedo1_1        (abs)        0000
 __size_of_dedo1_2        (abs)        0000
@@ -371,18 +372,18 @@ __size_of_putch          (abs)        0000
 __size_of_read_eeprom    (abs)        0000
 __size_of_setup          (abs)        0000
 __size_of_write_eeprom   (abs)        0000
-__stringbase             strings      03FE
-__stringtab              strings      03EC
-_chanel                  text2        0595
-_dedo1_1                 text14       06A9
-_dedo1_2                 text17       06F4
-_dedo1_3                 text13       0690
-_dedo2_1                 text12       0677
-_dedo2_2                 text16       06DB
-_dedo2_3                 text11       065E
-_dedo3_1                 text10       0645
-_dedo3_2                 text15       06C2
-_dedo3_3                 text9        062C
+__stringbase             strings      045D
+__stringtab              strings      044B
+_chanel                  text2        06A9
+_dedo1_1                 text14       07BD
+_dedo1_2                 text13       07A4
+_dedo1_3                 text17       0432
+_dedo2_1                 text12       078B
+_dedo2_2                 text11       0772
+_dedo2_3                 text16       0419
+_dedo3_1                 text10       0759
+_dedo3_2                 text9        0740
+_dedo3_3                 text15       07D6
 _flag_uart               bssBANK0     0029
 _isr                     text3        0028
 _lec_pwm1                bssBANK0     0021
@@ -392,16 +393,16 @@ _lectura_02              bssBANK0     0025
 _lectura_03              bssBANK0     0024
 _lectura_04              bssBANK0     0023
 _lectura_05              bssBANK0     0022
-_main                    maintext     071E
+_main                    maintext     045D
 _menu                    text6        0252
-_printf                  text7        05EA
-_putch                   text8        072C
-_read_eeprom             text5        070D
-_setup                   text1        0519
+_printf                  text7        06FE
+_putch                   text8        046B
+_read_eeprom             text5        07EF
+_setup                   text1        062D
 _var                     bssCOMMON    007D
 _var1                    bssCOMMON    007C
 _var2                    bssCOMMON    007B
-_write_eeprom            text4        0610
+_write_eeprom            text4        0724
 btemp                    (abs)        007E
 end_of_initialization    cinit        0024
 interrupt_function       intentry     0004
@@ -644,11 +645,11 @@ Total ram usage:        3 bytes
  Hardware stack levels required when called:    2
  This function calls:
 		_dedo1_1
-		_dedo1_3
+		_dedo1_2
 		_dedo2_1
-		_dedo2_3
+		_dedo2_2
 		_dedo3_1
-		_dedo3_3
+		_dedo3_2
 		_printf
  This function is called by:
 		_isr
@@ -660,9 +661,10 @@ Total ram usage:        3 bytes
 		line 477 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c"
  Parameters:    Size  Location     Type
   f               2    1[COMMON] PTR const unsigned char 
-		 -> STR_12(20), STR_11(9), STR_10(9), STR_9(17), 
-		 -> STR_8(20), STR_7(20), STR_6(20), STR_5(27), 
-		 -> STR_4(27), STR_3(33), STR_2(42), STR_1(37), 
+		 -> STR_13(20), STR_12(9), STR_11(9), STR_10(17), 
+		 -> STR_9(20), STR_8(20), STR_7(20), STR_6(27), 
+		 -> STR_5(27), STR_4(20), STR_3(33), STR_2(42), 
+		 -> STR_1(37), 
  Auto vars:     Size  Location     Type
   tmpval          4    0        struct .
   cp              2    0        PTR const unsigned char 
@@ -725,9 +727,9 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo3_3 *****************
+ *************** function _dedo3_2 *****************
  Defined at:
-		line 414 in file "Proyecto02.c"
+		line 407 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -785,9 +787,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo2_3 *****************
+ *************** function _dedo2_2 *****************
  Defined at:
-		line 393 in file "Proyecto02.c"
+		line 386 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -845,9 +847,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo1_3 *****************
+ *************** function _dedo1_2 *****************
  Defined at:
-		line 372 in file "Proyecto02.c"
+		line 365 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -905,9 +907,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo3_2 *****************
+ *************** function _dedo3_3 *****************
  Defined at:
-		line 407 in file "Proyecto02.c"
+		line 414 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -934,9 +936,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo2_2 *****************
+ *************** function _dedo2_3 *****************
  Defined at:
-		line 386 in file "Proyecto02.c"
+		line 393 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -963,9 +965,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _dedo1_2 *****************
+ *************** function _dedo1_3 *****************
  Defined at:
-		line 365 in file "Proyecto02.c"
+		line 372 in file "Proyecto02.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -997,34 +999,34 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-		_printf        		CODE           	05EA	0000	38
+		_printf        		CODE           	06FE	0000	38
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c estimated size: 38
 
 shared
-		__stringtab    		STRING         	03EC	0000	18
+		__stringtab    		STRING         	044B	0000	18
 		__initialization		CODE           	0015	0000	15
 
 shared estimated size: 33
 
 Proyecto02.c
-		_dedo3_2       		CODE           	06C2	0000	25
-		_dedo2_1       		CODE           	0677	0000	25
-		_putch         		CODE           	072C	0000	10
-		_menu          		CODE           	0252	0000	410
-		_main          		CODE           	071E	0000	14
-		_dedo3_1       		CODE           	0645	0000	25
-		_dedo1_3       		CODE           	0690	0000	25
-		_chanel        		CODE           	0595	0000	85
-		_dedo2_3       		CODE           	065E	0000	25
+		_dedo3_2       		CODE           	0740	0000	25
+		_dedo2_1       		CODE           	078B	0000	25
+		_putch         		CODE           	046B	0000	10
+		_menu          		CODE           	0252	0000	455
+		_main          		CODE           	045D	0000	14
+		_dedo3_1       		CODE           	0759	0000	25
+		_dedo1_3       		CODE           	0432	0000	25
+		_chanel        		CODE           	06A9	0000	85
+		_dedo2_3       		CODE           	0419	0000	25
 		_isr           		CODE           	0028	0000	554
-		_dedo1_2       		CODE           	06F4	0000	25
-		_dedo3_3       		CODE           	062C	0000	25
-		_setup         		CODE           	0519	0000	124
-		_dedo2_2       		CODE           	06DB	0000	25
-		_read_eeprom   		CODE           	070D	0000	17
-		_write_eeprom  		CODE           	0610	0000	28
-		_dedo1_1       		CODE           	06A9	0000	25
+		_dedo1_2       		CODE           	07A4	0000	25
+		_dedo3_3       		CODE           	07D6	0000	25
+		_setup         		CODE           	062D	0000	124
+		_dedo2_2       		CODE           	0772	0000	25
+		_read_eeprom   		CODE           	07EF	0000	17
+		_write_eeprom  		CODE           	0724	0000	28
+		_dedo1_1       		CODE           	07BD	0000	25
 
-Proyecto02.c estimated size: 1467
+Proyecto02.c estimated size: 1512
 

@@ -477,7 +477,7 @@
 "459
 [v _menu menu `(v  1 e 1 0 ]
 {
-"527
+"535
 } 0
 "477 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -498,48 +498,48 @@
 [v putch@data data `uc  1 a 1 0 ]
 "456
 } 0
-"414
-[v _dedo3_3 dedo3_3 `(v  1 e 1 0 ]
+"407
+[v _dedo3_2 dedo3_2 `(v  1 e 1 0 ]
 {
-"419
+"412
 } 0
 "400
 [v _dedo3_1 dedo3_1 `(v  1 e 1 0 ]
 {
 "405
 } 0
-"393
-[v _dedo2_3 dedo2_3 `(v  1 e 1 0 ]
+"386
+[v _dedo2_2 dedo2_2 `(v  1 e 1 0 ]
 {
-"398
+"391
 } 0
 "379
 [v _dedo2_1 dedo2_1 `(v  1 e 1 0 ]
 {
 "384
 } 0
-"372
-[v _dedo1_3 dedo1_3 `(v  1 e 1 0 ]
+"365
+[v _dedo1_2 dedo1_2 `(v  1 e 1 0 ]
 {
-"377
+"370
 } 0
 "358
 [v _dedo1_1 dedo1_1 `(v  1 e 1 0 ]
 {
 "363
 } 0
-"407
-[v _dedo3_2 dedo3_2 `(v  1 e 1 0 ]
+"414
+[v _dedo3_3 dedo3_3 `(v  1 e 1 0 ]
 {
-"412
+"419
 } 0
-"386
-[v _dedo2_2 dedo2_2 `(v  1 e 1 0 ]
+"393
+[v _dedo2_3 dedo2_3 `(v  1 e 1 0 ]
 {
-"391
+"398
 } 0
-"365
-[v _dedo1_2 dedo1_2 `(v  1 e 1 0 ]
+"372
+[v _dedo1_3 dedo1_3 `(v  1 e 1 0 ]
 {
-"370
+"377
 } 0

@@ -242,7 +242,13 @@ void setup(void){
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1;
     TRISBbits.TRISB2 = 1;
-    TRISBbits.TRISB6 = 0;
+    TRISBbits.TRISBs.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    TRISAbits.TRISA2 = 1;
+    TRISAbits.TRISA3 = 1;
+    TRISAbits.TRISA5 = 1;
+    
+    // PORTB6 = 0;
     TRISBbits.TRISB7 = 0;
     
     // PORTD
@@ -458,61 +464,69 @@ void putch(char data){      // Funcion especifica de libreria stdio.h
 // Funcion donde se definen las cadenas mediante printf
 void menu(void){
     __delay_ms(250); //Tiempos para el despliegue de los caracteres
-    printf("\r -----------Bienvenido----------- \r");
+    printf("\n -----------Bienvenido----------- \n");
     __delay_ms(250);
-    printf("\r Elija una de las siguientes opciones: \r");
+    printf("\n Elija una de las siguientes opciones: \n");
     __delay_ms(250);
-    printf(" 1. Mover motores individuales \r");
+    printf(" 1. Mover motores individuales \n");
     __delay_ms(250);
-    printf(" 2. Salir de la terminal \r");
+    printf(" 2. Encender leds \n");
+    __delay_ms(250);
+    printf(" 3. Salir de la terminal \n");
 
     while (RCIF == 0);
     // Se establecen las opciones del menu
     if (RCREG == '1'){
         __delay_ms(500);
-        printf("\r Que motor desea mover? \r");
+        printf("\n Que motor desea mover? \n");
         __delay_ms(250);
-        printf(" a. Mover motor 1 \r");
+        printf(" a. Mover motor 1 \n");
         __delay_ms(250);
-        printf(" b. Mover motor 2 \r");
+        printf(" b. Mover motor 2 \n");
         __delay_ms(250);
-        printf(" c. Mover motor 3 \r");
+        printf(" c. Mover motor 3 \n");
         __delay_ms(250);
         
         while (RCIF == 0);
         
         if (RCREG == 'a'){
             dedo1_1();
-            __delay_ms(2500);
-            dedo1_3();
+            __delay_ms(1000);
+            dedo1_2();
         }
         if (RCREG == 'b'){
             dedo2_1();
-            __delay_ms(2500);
-            dedo2_3();
+            __delay_ms(1000);
+            dedo2_2();
         }
         if (RCREG == 'c'){
             dedo3_1();
-            __delay_ms(2500);
-            dedo3_3();
+            __delay_ms(1000);
+            dedo3_2();
         }        
         else{
             NULL;
         }
     }
-    if (RCREG == '2'){ //tercera opcion del menu
-        printf("\r Esta seguro? \r");
+    if (RCREG == '2'){
+        PORTBbits.RB6 = 1;
+        __delay_ms(500);
+        PORTBbits.RB6 = 0;
+    }
+    
+    if (RCREG == '3'){ //tercera opcion del menu
+        printf("\r Esta seguro? \n");
         __delay_ms(250);
-        printf(" d. Si \r");
+        printf(" d. Si \n");
         __delay_ms(250);
-        printf(" e. No \r");
+        printf(" e. No \n");
         __delay_ms(250);
         
         while (RCIF == 0);
         if (RCREG == 'd'){
             flag_uart = 0;
 //            TXSTAbits.TXEN = 0;
-            printf(" Gracias por todo \r");
+            printf(" Gracias por todo \n");
             __delay_ms(250);
             
         }

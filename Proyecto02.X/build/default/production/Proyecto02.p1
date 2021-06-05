@@ -1806,228 +1806,252 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Proyecto02.c: 460:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "461
-[; ;Proyecto02.c: 461:     printf("\r -----------Bienvenido----------- \r");
+[; ;Proyecto02.c: 461:     printf("\n -----------Bienvenido----------- \n");
 [e ( _printf :s 1C ]
 "462
 [; ;Proyecto02.c: 462:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "463
-[; ;Proyecto02.c: 463:     printf("\r Elija una de las siguientes opciones: \r");
+[; ;Proyecto02.c: 463:     printf("\n Elija una de las siguientes opciones: \n");
 [e ( _printf :s 2C ]
 "464
 [; ;Proyecto02.c: 464:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "465
-[; ;Proyecto02.c: 465:     printf(" 1. Mover motores individuales \r");
+[; ;Proyecto02.c: 465:     printf(" 1. Mover motores individuales \n");
 [e ( _printf :s 3C ]
 "466
 [; ;Proyecto02.c: 466:     _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "467
-[; ;Proyecto02.c: 467:     printf(" 2. Salir de la terminal \r");
+[; ;Proyecto02.c: 467:     printf(" 2. Encender leds \n");
 [e ( _printf :s 4C ]
+"468
+[; ;Proyecto02.c: 468:     _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "469
-[; ;Proyecto02.c: 469:     while (RCIF == 0);
+[; ;Proyecto02.c: 469:     printf(" 3. Salir de la terminal \n");
+[e ( _printf :s 5C ]
+"471
+[; ;Proyecto02.c: 471:     while (RCIF == 0);
 [e $U 216  ]
 [e :U 217 ]
 [e :U 216 ]
 [e $ == -> _RCIF `i -> 0 `i 217  ]
 [e :U 218 ]
-"471
-[; ;Proyecto02.c: 471:     if (RCREG == '1'){
+"473
+[; ;Proyecto02.c: 473:     if (RCREG == '1'){
 [e $ ! == -> _RCREG `ui -> 49 `ui 219  ]
 {
-"472
-[; ;Proyecto02.c: 472:         _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"473
-[; ;Proyecto02.c: 473:         printf("\r Que motor desea mover? \r");
-[e ( _printf :s 5C ]
 "474
-[; ;Proyecto02.c: 474:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;Proyecto02.c: 474:         _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "475
-[; ;Proyecto02.c: 475:         printf(" a. Mover motor 1 \r");
+[; ;Proyecto02.c: 475:         printf("\n Que motor desea mover? \n");
 [e ( _printf :s 6C ]
 "476
 [; ;Proyecto02.c: 476:         _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "477
-[; ;Proyecto02.c: 477:         printf(" b. Mover motor 2 \r");
+[; ;Proyecto02.c: 477:         printf(" a. Mover motor 1 \n");
 [e ( _printf :s 7C ]
 "478
 [; ;Proyecto02.c: 478:         _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "479
-[; ;Proyecto02.c: 479:         printf(" c. Mover motor 3 \r");
+[; ;Proyecto02.c: 479:         printf(" b. Mover motor 2 \n");
 [e ( _printf :s 8C ]
 "480
 [; ;Proyecto02.c: 480:         _delay((unsigned long)((250)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"481
+[; ;Proyecto02.c: 481:         printf(" c. Mover motor 3 \n");
+[e ( _printf :s 9C ]
 "482
-[; ;Proyecto02.c: 482:         while (RCIF == 0);
+[; ;Proyecto02.c: 482:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"484
+[; ;Proyecto02.c: 484:         while (RCIF == 0);
 [e $U 220  ]
 [e :U 221 ]
 [e :U 220 ]
 [e $ == -> _RCIF `i -> 0 `i 221  ]
 [e :U 222 ]
-"484
-[; ;Proyecto02.c: 484:         if (RCREG == 'a'){
+"486
+[; ;Proyecto02.c: 486:         if (RCREG == 'a'){
 [e $ ! == -> _RCREG `ui -> 97 `ui 223  ]
 {
-"485
-[; ;Proyecto02.c: 485:             dedo1_1();
-[e ( _dedo1_1 ..  ]
-"486
-[; ;Proyecto02.c: 486:             _delay((unsigned long)((2500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "487
-[; ;Proyecto02.c: 487:             dedo1_3();
-[e ( _dedo1_3 ..  ]
+[; ;Proyecto02.c: 487:             dedo1_1();
+[e ( _dedo1_1 ..  ]
 "488
-[; ;Proyecto02.c: 488:         }
+[; ;Proyecto02.c: 488:             _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"489
+[; ;Proyecto02.c: 489:             dedo1_2();
+[e ( _dedo1_2 ..  ]
+"490
+[; ;Proyecto02.c: 490:         }
 }
 [e :U 223 ]
-"489
-[; ;Proyecto02.c: 489:         if (RCREG == 'b'){
+"491
+[; ;Proyecto02.c: 491:         if (RCREG == 'b'){
 [e $ ! == -> _RCREG `ui -> 98 `ui 224  ]
 {
-"490
-[; ;Proyecto02.c: 490:             dedo2_1();
-[e ( _dedo2_1 ..  ]
-"491
-[; ;Proyecto02.c: 491:             _delay((unsigned long)((2500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "492
-[; ;Proyecto02.c: 492:             dedo2_3();
-[e ( _dedo2_3 ..  ]
+[; ;Proyecto02.c: 492:             dedo2_1();
+[e ( _dedo2_1 ..  ]
 "493
-[; ;Proyecto02.c: 493:         }
+[; ;Proyecto02.c: 493:             _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"494
+[; ;Proyecto02.c: 494:             dedo2_2();
+[e ( _dedo2_2 ..  ]
+"495
+[; ;Proyecto02.c: 495:         }
 }
 [e :U 224 ]
-"494
-[; ;Proyecto02.c: 494:         if (RCREG == 'c'){
+"496
+[; ;Proyecto02.c: 496:         if (RCREG == 'c'){
 [e $ ! == -> _RCREG `ui -> 99 `ui 225  ]
 {
-"495
-[; ;Proyecto02.c: 495:             dedo3_1();
-[e ( _dedo3_1 ..  ]
-"496
-[; ;Proyecto02.c: 496:             _delay((unsigned long)((2500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "497
-[; ;Proyecto02.c: 497:             dedo3_3();
-[e ( _dedo3_3 ..  ]
+[; ;Proyecto02.c: 497:             dedo3_1();
+[e ( _dedo3_1 ..  ]
 "498
-[; ;Proyecto02.c: 498:         }
+[; ;Proyecto02.c: 498:             _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"499
+[; ;Proyecto02.c: 499:             dedo3_2();
+[e ( _dedo3_2 ..  ]
+"500
+[; ;Proyecto02.c: 500:         }
 }
 [e $U 226  ]
-"499
-[; ;Proyecto02.c: 499:         else{
+"501
+[; ;Proyecto02.c: 501:         else{
 [e :U 225 ]
 {
-"500
-[; ;Proyecto02.c: 500:             (0);
+"502
+[; ;Proyecto02.c: 502:             (0);
 [e -> 0 `i ]
-"501
-[; ;Proyecto02.c: 501:         }
+"503
+[; ;Proyecto02.c: 503:         }
 }
 [e :U 226 ]
-"502
-[; ;Proyecto02.c: 502:     }
+"504
+[; ;Proyecto02.c: 504:     }
 }
 [e :U 219 ]
-"503
-[; ;Proyecto02.c: 503:     if (RCREG == '2'){
+"505
+[; ;Proyecto02.c: 505:     if (RCREG == '2'){
 [e $ ! == -> _RCREG `ui -> 50 `ui 227  ]
 {
-"504
-[; ;Proyecto02.c: 504:         printf("\r Esta seguro? \r");
-[e ( _printf :s 9C ]
-"505
-[; ;Proyecto02.c: 505:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "506
-[; ;Proyecto02.c: 506:         printf(" d. Si \r");
-[e ( _printf :s 10C ]
+[; ;Proyecto02.c: 506:         PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
 "507
-[; ;Proyecto02.c: 507:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;Proyecto02.c: 507:         _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "508
-[; ;Proyecto02.c: 508:         printf(" e. No \r");
-[e ( _printf :s 11C ]
+[; ;Proyecto02.c: 508:         PORTBbits.RB6 = 0;
+[e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
 "509
-[; ;Proyecto02.c: 509:         _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"511
-[; ;Proyecto02.c: 511:         while (RCIF == 0);
-[e $U 228  ]
-[e :U 229 ]
-[e :U 228 ]
-[e $ == -> _RCIF `i -> 0 `i 229  ]
-[e :U 230 ]
-"512
-[; ;Proyecto02.c: 512:         if (RCREG == 'd'){
-[e $ ! == -> _RCREG `ui -> 100 `ui 231  ]
-{
-"513
-[; ;Proyecto02.c: 513:             flag_uart = 0;
-[e = _flag_uart -> -> 0 `i `uc ]
-"515
-[; ;Proyecto02.c: 515:             printf(" Gracias por todo \r");
-[e ( _printf :s 12C ]
-"516
-[; ;Proyecto02.c: 516:             _delay((unsigned long)((250)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"518
-[; ;Proyecto02.c: 518:         }
+[; ;Proyecto02.c: 509:     }
 }
-[e $U 232  ]
-"519
-[; ;Proyecto02.c: 519:         else if (RCREG == 'e'){
-[e :U 231 ]
-[e $ ! == -> _RCREG `ui -> 101 `ui 233  ]
-{
-"520
-[; ;Proyecto02.c: 520:             (0);
-[e -> 0 `i ]
-"521
-[; ;Proyecto02.c: 521:         }
-}
-[e :U 233 ]
-[e :U 232 ]
-"522
-[; ;Proyecto02.c: 522:     }
-}
-[e $U 234  ]
-"523
-[; ;Proyecto02.c: 523:     else{
 [e :U 227 ]
+"511
+[; ;Proyecto02.c: 511:     if (RCREG == '3'){
+[e $ ! == -> _RCREG `ui -> 51 `ui 228  ]
 {
+"512
+[; ;Proyecto02.c: 512:         printf("\r Esta seguro? \n");
+[e ( _printf :s 10C ]
+"513
+[; ;Proyecto02.c: 513:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"514
+[; ;Proyecto02.c: 514:         printf(" d. Si \n");
+[e ( _printf :s 11C ]
+"515
+[; ;Proyecto02.c: 515:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"516
+[; ;Proyecto02.c: 516:         printf(" e. No \n");
+[e ( _printf :s 12C ]
+"517
+[; ;Proyecto02.c: 517:         _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"519
+[; ;Proyecto02.c: 519:         while (RCIF == 0);
+[e $U 229  ]
+[e :U 230 ]
+[e :U 229 ]
+[e $ == -> _RCIF `i -> 0 `i 230  ]
+[e :U 231 ]
+"520
+[; ;Proyecto02.c: 520:         if (RCREG == 'd'){
+[e $ ! == -> _RCREG `ui -> 100 `ui 232  ]
+{
+"521
+[; ;Proyecto02.c: 521:             flag_uart = 0;
+[e = _flag_uart -> -> 0 `i `uc ]
+"523
+[; ;Proyecto02.c: 523:             printf(" Gracias por todo \n");
+[e ( _printf :s 13C ]
 "524
-[; ;Proyecto02.c: 524:         (0);
+[; ;Proyecto02.c: 524:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"526
+[; ;Proyecto02.c: 526:         }
+}
+[e $U 233  ]
+"527
+[; ;Proyecto02.c: 527:         else if (RCREG == 'e'){
+[e :U 232 ]
+[e $ ! == -> _RCREG `ui -> 101 `ui 234  ]
+{
+"528
+[; ;Proyecto02.c: 528:             (0);
 [e -> 0 `i ]
-"525
-[; ;Proyecto02.c: 525:     }
+"529
+[; ;Proyecto02.c: 529:         }
 }
 [e :U 234 ]
-"526
-[; ;Proyecto02.c: 526:     return;
+[e :U 233 ]
+"530
+[; ;Proyecto02.c: 530:     }
+}
+[e $U 235  ]
+"531
+[; ;Proyecto02.c: 531:     else{
+[e :U 228 ]
+{
+"532
+[; ;Proyecto02.c: 532:         (0);
+[e -> 0 `i ]
+"533
+[; ;Proyecto02.c: 533:     }
+}
+[e :U 235 ]
+"534
+[; ;Proyecto02.c: 534:     return;
 [e $UE 215  ]
-"527
-[; ;Proyecto02.c: 527: }
+"535
+[; ;Proyecto02.c: 535: }
 [e :UE 215 ]
 }
 [p f _printf 8388608 ]
-[a 3C 32 49 46 32 77 111 118 101 114 32 109 111 116 111 114 101 115 32 105 110 100 105 118 105 100 117 97 108 101 115 32 13 0 ]
-[a 12C 32 71 114 97 99 105 97 115 32 112 111 114 32 116 111 100 111 32 13 0 ]
-[a 11C 32 101 46 32 78 111 32 13 0 ]
-[a 4C 32 50 46 32 83 97 108 105 114 32 100 101 32 108 97 32 116 101 114 109 105 110 97 108 32 13 0 ]
-[a 10C 32 100 46 32 83 105 32 13 0 ]
-[a 5C 13 32 81 117 101 32 109 111 116 111 114 32 100 101 115 101 97 32 109 111 118 101 114 63 32 13 0 ]
-[a 9C 13 32 69 115 116 97 32 115 101 103 117 114 111 63 32 13 0 ]
-[a 2C 13 32 69 108 105 106 97 32 117 110 97 32 100 101 32 108 97 115 32 115 105 103 117 105 101 110 116 101 115 32 111 112 99 105 111 110 101 115 58 32 13 0 ]
-[a 8C 32 99 46 32 77 111 118 101 114 32 109 111 116 111 114 32 51 32 13 0 ]
-[a 7C 32 98 46 32 77 111 118 101 114 32 109 111 116 111 114 32 50 32 13 0 ]
-[a 6C 32 97 46 32 77 111 118 101 114 32 109 111 116 111 114 32 49 32 13 0 ]
-[a 1C 13 32 45 45 45 45 45 45 45 45 45 45 45 66 105 101 110 118 101 110 105 100 111 45 45 45 45 45 45 45 45 45 45 45 32 13 0 ]
+[a 3C 32 49 46 32 77 111 118 101 114 32 109 111 116 111 114 101 115 32 105 110 100 105 118 105 100 117 97 108 101 115 32 10 0 ]
+[a 4C 32 50 46 32 69 110 99 101 110 100 101 114 32 108 101 100 115 32 10 0 ]
+[a 13C 32 71 114 97 99 105 97 115 32 112 111 114 32 116 111 100 111 32 10 0 ]
+[a 12C 32 101 46 32 78 111 32 10 0 ]
+[a 5C 32 51 46 32 83 97 108 105 114 32 100 101 32 108 97 32 116 101 114 109 105 110 97 108 32 10 0 ]
+[a 11C 32 100 46 32 83 105 32 10 0 ]
+[a 6C 10 32 81 117 101 32 109 111 116 111 114 32 100 101 115 101 97 32 109 111 118 101 114 63 32 10 0 ]
+[a 10C 13 32 69 115 116 97 32 115 101 103 117 114 111 63 32 10 0 ]
+[a 2C 10 32 69 108 105 106 97 32 117 110 97 32 100 101 32 108 97 115 32 115 105 103 117 105 101 110 116 101 115 32 111 112 99 105 111 110 101 115 58 32 10 0 ]
+[a 9C 32 99 46 32 77 111 118 101 114 32 109 111 116 111 114 32 51 32 10 0 ]
+[a 8C 32 98 46 32 77 111 118 101 114 32 109 111 116 111 114 32 50 32 10 0 ]
+[a 7C 32 97 46 32 77 111 118 101 114 32 109 111 116 111 114 32 49 32 10 0 ]
+[a 1C 10 32 45 45 45 45 45 45 45 45 45 45 45 66 105 101 110 118 101 110 105 100 111 45 45 45 45 45 45 45 45 45 45 45 32 10 0 ]

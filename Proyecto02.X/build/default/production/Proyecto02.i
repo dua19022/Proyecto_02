@@ -3173,61 +3173,69 @@ void putch(char data){
 
 void menu(void){
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf("\r -----------Bienvenido----------- \r");
+    printf("\n -----------Bienvenido----------- \n");
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf("\r Elija una de las siguientes opciones: \r");
+    printf("\n Elija una de las siguientes opciones: \n");
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf(" 1. Mover motores individuales \r");
+    printf(" 1. Mover motores individuales \n");
     _delay((unsigned long)((250)*(8000000/4000.0)));
-    printf(" 2. Salir de la terminal \r");
+    printf(" 2. Encender leds \n");
+    _delay((unsigned long)((250)*(8000000/4000.0)));
+    printf(" 3. Salir de la terminal \n");
 
     while (RCIF == 0);
 
     if (RCREG == '1'){
         _delay((unsigned long)((500)*(8000000/4000.0)));
-        printf("\r Que motor desea mover? \r");
+        printf("\n Que motor desea mover? \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" a. Mover motor 1 \r");
+        printf(" a. Mover motor 1 \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" b. Mover motor 2 \r");
+        printf(" b. Mover motor 2 \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" c. Mover motor 3 \r");
+        printf(" c. Mover motor 3 \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
 
         while (RCIF == 0);
 
         if (RCREG == 'a'){
             dedo1_1();
-            _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo1_3();
+            _delay((unsigned long)((1000)*(8000000/4000.0)));
+            dedo1_2();
         }
         if (RCREG == 'b'){
             dedo2_1();
-            _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo2_3();
+            _delay((unsigned long)((1000)*(8000000/4000.0)));
+            dedo2_2();
         }
         if (RCREG == 'c'){
             dedo3_1();
-            _delay((unsigned long)((2500)*(8000000/4000.0)));
-            dedo3_3();
+            _delay((unsigned long)((1000)*(8000000/4000.0)));
+            dedo3_2();
         }
         else{
             (0);
         }
     }
     if (RCREG == '2'){
-        printf("\r Esta seguro? \r");
+        PORTBbits.RB6 = 1;
+        _delay((unsigned long)((500)*(8000000/4000.0)));
+        PORTBbits.RB6 = 0;
+    }
+
+    if (RCREG == '3'){
+        printf("\r Esta seguro? \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" d. Si \r");
+        printf(" d. Si \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
-        printf(" e. No \r");
+        printf(" e. No \n");
         _delay((unsigned long)((250)*(8000000/4000.0)));
 
         while (RCIF == 0);
         if (RCREG == 'd'){
             flag_uart = 0;
 
-            printf(" Gracias por todo \r");
+            printf(" Gracias por todo \n");
             _delay((unsigned long)((250)*(8000000/4000.0)));
 
         }
